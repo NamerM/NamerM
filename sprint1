@@ -1,5 +1,11 @@
 <!-- notes HTML -->
 /* notes in css */
 
-display: block;    
+/* CSS NOTES */  
+display: block; /* behaves as a block element */
+display: inline; /* behaves as an inline element */
+display: inline-block; /* behaves as an inline-block element */ 
+
 display; flex; 
+  
+margin: auto;
