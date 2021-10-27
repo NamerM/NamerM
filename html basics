@@ -10,3 +10,28 @@
   
 </body>
 </html>
+
+
+<!-- FLEXBOX Lessons -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://code.s3.yandex.net/web-code/normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Your Portfolio</title>
+</head>
+<body>
+  <div class="header"> <a href="#" target="_blank" class="header-link">Practicum by Yandex</a>  </div>
+  <div class="flex-row">
+    <div class="project project_beginner project_music-album"> 1 </div>
+    <div class="project project_beginner project_design-principles"> 2 </div>
+  </div>
+
+  <div class="flex-row">
+     <div class="flex-column">3</div>
+     <div class="project project_libraries project_procrastinate">4
+      <video class="project-video" src="https://code.s3.yandex.net/web-code/procrastinate-eng.mov" autoplay muted loop></video>
+     </div>
+  </div>
