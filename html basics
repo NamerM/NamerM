@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Your Portfolio</title>
 </head>
+
 <body>
   <div class="header"> <a href="#" target="_blank" class="header-link">Practicum by Yandex</a>  </div>
   <div class="flex-row">
@@ -30,8 +31,21 @@
   </div>
 
   <div class="flex-row">
-     <div class="flex-column">3</div>
-     <div class="project project_libraries project_procrastinate">4
+     <div class="flex-column">
+       <div class="project project_libraries project_p5"> 
+         <video class="project-video" src="https://code.s3.yandex.net/web-code/like.mp4" autoplay muted loop> </video> 
+       </div>
+       
+       <div class="flex-row flex-row_libraries-inner">
+         <div class="project project_libraries project_slider"></div>
+         <div class="project project_libraries project_reactive"></div>
+       </div>
+    </div>
+     <div class="project project_libraries project_procrastinate">
       <video class="project-video" src="https://code.s3.yandex.net/web-code/procrastinate-eng.mov" autoplay muted loop></video>
      </div>
   </div>
+ 
+  
+</body>
+</html>
