@@ -19,8 +19,11 @@ margin: auto;
 
 background-position: center;
 background-size: cover;
+background-image: url(https://code.s3.yandex.net/web-code/design.png);
 
-==== Flexbox ====
+
+
+==== Flexbox ==== Lesson 3 
 body, div, section, h1, h2, h3, h4, p {
   margin: 0px;
   font-size: 100%;
@@ -43,15 +46,22 @@ div {
 
 .flex-row {
   display: inline-flex
-  
 }
 
 .project {
   background-position: center;
   background-size: cover;
- }
+  
+}
 
 .project_beginner {
   width: 636px;
   height: 430px;
 }
+
+.project_music-album {
+  background-image: url(https://code.s3.yandex.net/web-code/album.png) ;
+}
+
+.project_design-principles{
+  background-image: 
