@@ -23,7 +23,7 @@ background-image: url(https://code.s3.yandex.net/web-code/design.png);
 
 
 
-==== Flexbox ==== Lesson 3 
+/* ==== Flexbox ==== Lesson 3 ile başladık */
 body, div, section, h1, h2, h3, h4, p {
   margin: 0px;
   font-size: 100%;
@@ -45,7 +45,7 @@ div {
 }
 
 .flex-row {
-  display: flex;
+  display: flex;  /* universal declaration - applies to all classes under div1 */
 }
 
 .project {
