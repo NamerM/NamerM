@@ -14,9 +14,44 @@ display: flex;
 display: block; /* behaves as a block element */
 display: inline; /* behaves as an inline element */
 display: inline-block; /* behaves as an inline-block element */ 
-
-
-  
+ 
 margin: auto;
 
+background-position: center;
+background-size: cover;
 
+==== Flexbox ====
+body, div, section, h1, h2, h3, h4, p {
+  margin: 0px;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+div {
+  border: 1px solid red;
+}
+
+.header {
+  height: 95px;
+  border: 1px solid red;
+  display: flex;
+}
+
+.header-link {
+  margin: auto;
+}
+
+.flex-row {
+  display: inline-flex
+  
+}
+
+.project {
+  background-position: center;
+  background-size: cover;
+ }
+
+.project_beginner {
+  width: 636px;
+  height: 430px;
+}
