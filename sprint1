@@ -2,10 +2,17 @@
 /* notes in css */
 
 /* CSS NOTES */  
+/* Start with adding these */
+body, div, section, h1, h2, h3, h4, p {
+  margin: 0px;
+  font-size: 100%;
+  font-weight: normal;
+}
+
 display: block; /* behaves as a block element */
 display: inline; /* behaves as an inline element */
 display: inline-block; /* behaves as an inline-block element */ 
 
-display; flex; 
+display: flex; 
   
 margin: auto;
