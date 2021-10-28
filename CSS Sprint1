@@ -25,13 +25,15 @@ background-image: url(https://code.s3.yandex.net/web-code/design.png);
 
 .container-size-med{ 
 display: flex; 
-justify-content: space-around;  - eşit mesafe bırakıyor her birinde // flex-start; flex-end; center; space-between(menubar için kullanışlı); space-around;
+justify-content: space-around;  - eşit mesafe bırakıyor // flex-start; flex-end; center; space-between(menubar için kullanışlı); space-around; space-evenly;
 flex-direction: column;
 
 .block_size_med: nth-of-type(odd){ background-color: #0882ff; }  / nth-of-type(even) { background-color: black; }  
 Böylece itemlar tek çifte göre renk değiştiriyor . cool.
 
 */
+
+/* align-item: strech; flex-start; flex-end; center; baseline;   */     
 
 /* ==== FLEXBOX-DERS KODLARI==== Lesson 3 ile başladık 5/15 */
 body, div, section, h1, h2, h3, h4, p {
