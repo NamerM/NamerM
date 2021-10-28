@@ -9,7 +9,7 @@ body, div, section, h1, h2, h3, h4, p {
   font-weight: normal;
 }
 
-display: flex; 
+display: flex;     /* flex-direction: row; / row-reverse / column / column-reverse
 
 display: block; /* behaves as a block element */
 display: inline; /* behaves as an inline element */
