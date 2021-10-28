@@ -21,9 +21,8 @@ background-position: center;
 background-size: cover;
 background-image: url(https://code.s3.yandex.net/web-code/design.png);
 
-/* JUSTIFY Content Property   : Horizantally aligns - X axis / Align-item vertical align - Y axis
+/* JUSTIFY Content : Horizantally aligns - X axis / Align-item vertical align - Y axis  // FLEX-DIRECTION - column/row directions
 
-.container-size-med{ 
 display: flex; 
 justify-content: space-around;  - eşit mesafe bırakıyor // flex-start; flex-end; center; space-between(menubar için kullanışlı); space-around; space-evenly;
 flex-direction: column; row; column-reverse; row-reverse; 
