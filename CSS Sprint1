@@ -27,11 +27,12 @@ display: flex;
 justify-content: space-around;  - eşit mesafe bırakıyor // flex-start; flex-end; center; space-between(menubar için kullanışlı); space-around; space-evenly;
 flex-direction: column; row; column-reverse; row-reverse; 
 align-item: strech; flex-start; flex-end; center; baseline;  
+flex-wrap: wrap; reverse; 
 
 .block_size_med: nth-of-type(odd){ background-color: #0882ff; }  / nth-of-type(even) { background-color: black; }  
 Böylece itemlar tek çifte göre renk değiştiriyor . cool.
 
-*/
+/* ORDER   order: -1; 0; 1; 2; 3; */ 
 
 /*  */     
 
