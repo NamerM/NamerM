@@ -21,7 +21,8 @@ background-position: center;
 background-size: cover;
 background-image: url(https://code.s3.yandex.net/web-code/design.png);
 
-
+/* JUSTIFY Content Property   .block_size_med: nth-of-type(odd){ background-color: #0882ff; }  / nth-of-type(even) { background-color: black; }  
+Böylece itemlar tek çifte göre renk deüğiştiriyor . cool.  */
 
 /* ==== Flexbox ==== Lesson 3 ile başladık 5/15 */
 body, div, section, h1, h2, h3, h4, p {
