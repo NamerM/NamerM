@@ -21,13 +21,19 @@ background-position: center;
 background-size: cover;
 background-image: url(https://code.s3.yandex.net/web-code/design.png);
 
-/* JUSTIFY Content Property   justify-content: space-around;  - eşit mesafe bırakıyor her birinde.
+/* JUSTIFY Content Property   
+
+.container-size-med{ 
+display: flex; 
+justify-content: space-around;  - eşit mesafe bırakıyor her birinde // flex-start; flex-end; center; space-between(menubar için kullanışlı); space-around;
+flex-direction: column;
+
 .block_size_med: nth-of-type(odd){ background-color: #0882ff; }  / nth-of-type(even) { background-color: black; }  
-Böylece itemlar tek çifte göre renk deüğiştiriyor . cool.
+Böylece itemlar tek çifte göre renk değiştiriyor . cool.
 
 */
 
-/* ==== Flexbox ==== Lesson 3 ile başladık 5/15 */
+/* ==== FLEXBOX-DERS KODLARI==== Lesson 3 ile başladık 5/15 */
 body, div, section, h1, h2, h3, h4, p {
   margin: 0px;
   font-size: 100%;
