@@ -9,13 +9,19 @@ body, div, section, h1, h2, h3, h4, p {
   font-weight: normal;
 }
 
+.font-types{
+  color: ... ;
+  text-decoration: none
+}
+
+
 display: flex;     /* flex-direction: row; / row-reverse / column / column-reverse
 
 display: block; /* behaves as a block element */
 display: inline; /* behaves as an inline element */
 display: inline-block; /* behaves as an inline-block element */ 
  
-margin: auto;
+margin: 60px auto;   / ilk 60px top-bottom  auto ise left-right 
 
 background-position: center;
 background-size: cover;
@@ -33,12 +39,18 @@ align-self: flex-start; flex-end; strech, center; baseline;
 
 flex-basis: 636px; / row için width column için height
 
+align-content: cross axis - Y Düzlemi (flex-wrap: wrap; olmadan çalışmaz!) align-content: flex-start; flex-end; center; space-around; space-between; strecth;
+order: -1; 0; 1; 2; 3; 
+
+flex-grow: ; flex-shrink: ; flex-basis: ;
+
 .block_size_med: nth-of-type(odd){ background-color: #0882ff; }  / nth-of-type(even) { background-color: black; }  
 Böylece itemlar tek çifte göre renk değiştiriyor . cool.
 
 /* ORDER   order: -1; 0; 1; 2; 3; */ 
 
-/*  */     
+flex-direction: column;  justify-content: Dikeyde - align-items: Yatayda çalışır!
+
 
 /* ==== FLEXBOX-DERS KODLARI==== Lesson 3 ile başladık 5/15 */
 body, div, section, h1, h2, h3, h4, p {
