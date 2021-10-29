@@ -1,15 +1,19 @@
-<html>
+<html> <header> </header> <body> <header></header> <main></main> <section></section> <article></article> <nav></nav> </body> </html>
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- note that the content attribute has multiple values, and these values are separated
+  by a comma -->
+  <meta name="description" content="Yet another excellent lesson in web development brought to you by Practicum">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Elise Bouer">
   <link rel="stylesheet" href="https://code.s3.yandex.net/web-code/normalize.css">
   <link rel="stylesheet" href="style.css">
   <title>Your Portfolio</title>
-</head>
-<body>
-  <div class="header"> <a href="#" target="_blank" class="header-link">Practicum by Yandex</a>  </div>
   
-</body>
-</html>
+  <ul> <li>abc</li> <ul>
+  <ol> <li>reg</li> </ol>
+  <blockquote cite="xxx.com">geldim gördüm yendim</blockquote> 
 
 
 <!-- FLEXBOX Lessons -->
