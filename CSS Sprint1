@@ -52,34 +52,79 @@ Böylece itemlar tek çifte göre renk değiştiriyor . cool.
 flex-direction: column;  justify-content: Dikeyde - align-items: Yatayda çalışır!
 
 
-/* ==== FLEXBOX-DERS KODLARI==== Lesson 3 ile başladık 5/15 */
+/* ==== FLEXBOX-DERS KODLARI==== Lesson 3 ile başladık 51/15 */
 body, div, section, h1, h2, h3, h4, p {
   margin: 0px;
-  font-size: 100%;
+  font-size: 100%; 
   font-weight: normal;
+ }
+
+body {
+  font-family: 'Cormorant Garamond';
 }
 
-div {
-  border: 1px solid red;
+  /* div { border: 1px red; } silindi gerek kalmadığından hem ana css elementinden hem header classtan */
+  
+.main {
+  max-width: 1330px;
+  min-width: 1280px;
+  margin: auto;
 }
-
 .header {
-  height: 95px;
-  border: 1px solid red;
   display: flex;
+  height: 95px;
+  max-width: 1330px;
+  min-width: 1280px;
+  margin: auto;
+  
 }
 
 .header-link {
   margin: auto;
+  font-size: 28px;
+  color: #10191E;
+  text-decoration: none;
 }
 
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 75px;
+  max-width: 1330px;
+  min-width: 1280px;
+  margin: 40px auto;
+ 
+}
+
+.menu-link {
+  margin-right: 20px;
+  font-size: 18px;
+  color: #10191E;
+  text-decoration: none;
+  
+}
 .flex-row {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flex-row_reversed{
+  flex-direction: row-reverse;  
+  margin: 60px auto;
 }
 
 .flex-column {
+  display: flex;
+  justify-content: space-between;
   width: 636px;
   height: 557px;
+}
+
+.flex-column_reversed{
+  flex-direction: column-reverse;
 }
 
 .flex-row_libraries-inner{
@@ -90,7 +135,6 @@ div {
 .project {
   background-position: center;
   background-size: cover;
-  
 }
 
 .project_beginner {
@@ -136,4 +180,64 @@ div {
   width: 306px;
   height: 290px; 
   background-image: url(https://code.s3.yandex.net/web-code/reactive.gif);
+}
+
+.project_vanilla {
+  width: 306px;
+  height: 290px; 
+}
+
+.project_how-to-study{
+  background-image: url(https://code.s3.yandex.net/web-code/how-to-study-eng.png);
+  order: 2;
+}
+
+.project_across-usa{
+  background-image: url(https://code.s3.yandex.net/web-code/across-usa.png);
+  order: 1;
+  flex-basis: 636px;
+}
+
+.project_around{
+  background-image: url(https://code.s3.yandex.net/web-code/around.png);
+  order: 0;
+}
+
+.footer {
+  min-height: 95px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1330px;
+  min-width: 1280px;
+  margin: auto;
+}
+
+.logo {
+  width: 145px;
+  height: 25px;
+  background-image: url(https://code.s3.yandex.net/web-code/logo-black-eng.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.copyrights{
+  display: flex;
+  align-self: flex-end;
+}
+.social-icons{
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-icon{
+  width: 24px;
 }
