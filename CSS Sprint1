@@ -29,6 +29,10 @@ flex-direction: column; row; column-reverse; row-reverse;
 align-item: strech; flex-start; flex-end; center; baseline;  
 flex-wrap: wrap; reverse; 
 
+align-self: flex-start; flex-end; strech, center; baseline;
+
+flex-basis: 636px; / row için width column için height
+
 .block_size_med: nth-of-type(odd){ background-color: #0882ff; }  / nth-of-type(even) { background-color: black; }  
 Böylece itemlar tek çifte göre renk değiştiriyor . cool.
 
