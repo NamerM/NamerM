@@ -49,8 +49,46 @@ Böylece itemlar tek çifte göre renk değiştiriyor . cool.
 
 /* ORDER   order: -1; 0; 1; 2; 3; */ 
 
-flex-direction: column;  justify-content: Dikeyde - align-items: Yatayda çalışır!
+flex-direction: column;  justify-content: Dikeyde - align-items: Yatayda çalışır/kolonsa x, row ise y ekseninde, ters yönde konumlandırır.!
 
+PSEUDO CLASS SAMPLES /* all links untouched by the user will be blue */
+a:link {
+    color: #00f;
+}
+/* links visited by the user will appear pale gray */
+a:visited {
+    color: #808080;
+}
+/* when hovered over, the link will turn green */
+a:hover {
+    color: #0f0;
+}
+/* links clicked on by the user will turn red */
+a:active {
+    color: #f00;
+} 
+
+/* every 3rd element with the "card" class will have a right margin of 0 */
+.card:nth-of-type(3n) {   
+    margin-right: 0;
+}   / last-of-type , first-of-type
+
+/* styles will apply only to sections containing an <h2> element */
+section:has(h2) {
+    /* styles */
+}
+
+/* will select all unvisited links */
+a:not(:visited) {
+    /* styles */
+} 
+
+/*  .selector::before {}   / .selector::after {}
+
+/*  Attribute Selectors : 
+img[src="logo.png"] {
+    border: 1px solid #0000ff;
+}    */
 
 /* ==== FLEXBOX-DERS KODLARI==== Lesson 3 ile başladık 51/15 */
 body, div, section, h1, h2, h3, h4, p {
