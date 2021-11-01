@@ -84,6 +84,9 @@ a:not(:visited) {
 } 
 
 /*  .selector::before {}   / .selector::after {}
+.header-link[lang="en"]::before{
+  content: "Hello, my name is "                 */
+
 
 /*  Attribute Selectors : 
 img[src="logo.png"] {
