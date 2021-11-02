@@ -93,6 +93,14 @@ img[src="logo.png"] {
     border: 1px solid #0000ff;
 }    */
 
+/* position: fixed; relative; absolute;  (static;  default değer)
+div {
+  position: relative;
+    top: 15px;
+    left: 40px;
+} */ 
+
+
 /* ==== FLEXBOX-DERS KODLARI==== Lesson 3 ile başladık 51/15 */
 body, div, section, h1, h2, h3, h4, p {
   margin: 0px;
