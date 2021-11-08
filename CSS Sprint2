@@ -1,0 +1,12 @@
+/* SPRINT 2  */ 
+/* vendor prefix */
+
+my-class {
+    -webkit-box-shadow: /* some value */;
+          box-shadow: /* some value */;
+} 
+
+.my-class {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
