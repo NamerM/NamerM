@@ -14,4 +14,6 @@ my-class {
 /* Adding Font */
 @font-face: {
     src:  url () format ('');
+    font-family: ;
+    font-weight: ;
     }
