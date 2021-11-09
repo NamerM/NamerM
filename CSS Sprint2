@@ -10,3 +10,8 @@ my-class {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+
+/* Adding Font */
+@font-face: {
+    src:  url () format ('');
+    }
