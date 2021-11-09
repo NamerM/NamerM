@@ -1,0 +1,11 @@
+<!-- iFrame-->
+<iframe height="250px"></iframe>
+<iframe width="250px"></iframe>
+<iframe src="https://open.spotify.com/embed/track/2grjqo0Frpf2okIBiifQKs"></iframe>
+<iframe width="100%" allowfullscreen src="https://open.spotify.com/embed/track/2grjqo0Frpf2okIBiifQKs"></iframe>
+
+// Frameborder - discard //
+<iframe class="iframe" frameborder="0" width="600" height="100" src="https://open.spotify.com/embed/track/2grjqo0Frpf2okIBiifQKs"></iframe>
+Replace with
+<iframe class="iframe" width="600" height="100" src="https://open.spotify.com/embed/track/2grjqo0Frpf2okIBiifQKs"></iframe>
+
