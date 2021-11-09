@@ -12,7 +12,7 @@ my-class {
     display: flex;
 
 /* Adding Font */
-@font-face: {
+@font-face {
     src:  url () format ('');
     font-family: ;
     font-weight: ;
