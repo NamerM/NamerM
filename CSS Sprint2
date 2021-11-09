@@ -17,3 +17,24 @@ my-class {
     font-family: ;
     font-weight: ;
     }
+    
+
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&family=Ubuntu:wght@400;700&display=swap');
+
+
+/* iframe attributes */
+<iframe height="250px"></iframe>
+<iframe width="250px"></iframe>
+
+<iframe src="https://open.spotify.com/embed/track/2grjqo0Frpf2okIBiifQKs"></iframe>
+<iframe width="100%" allowfullscreen src="https://open.spotify.com/embed/track/2grjqo0Frpf2okIBiifQKs"></iframe>
+
+/* frameborder - discarding */
+<iframe class="iframe" frameborder="0" width="600" height="100" src="https://open.spotify.com/embed/track/2grjqo0Frpf2okIBiifQKs"></iframe>
+change with:
+
+<iframe class="iframe" width="600" height="100" src="https://open.spotify.com/embed/track/2grjqo0Frpf2okIBiifQKs"></iframe>  /* html de */
+
+.iframe {
+  border: none;
+}
