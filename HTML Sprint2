@@ -13,15 +13,21 @@ Replace with
 <iframe>Hello! Your browser doesn't support iframes.<br>
 We can't show you this amazing thing.</iframe>  
 
-// Vidoe //
+// Video //
 <video width="320" height="240" controls>
   <source src="clip.mp4" type="video/mp4"><type="video/mp4"><poster="./clip.jpg">
   <source src="clip.ogg" type="video/ogg"><type="video/ogg"><poster="./clip.jpg">
   <!-- if the mp4 format doesn't work, the browser will try the ogg format --> 
 </video> 
 
+// audio //
 <audio>
-   <source src="sound.mp3" type="audio/mp3">
+   <source src="sound.mp3" type="audio/mp3" autoplay loop controls muted>
    <source src="sound.ogg" type="audio/ogg">
    <!--if .mp3 files aren't compatible, a browser will try the .ogg format--> 
 </audio> 
+
+// iframe youtube //
+<iframe id="ytplayer" type="text/html" width="720" height="405"
+src="https://www.youtube.com/embed/Dl3TWRAf3tg?autoplay=1&start=15"
+frameborder="0" allowfullscreen>
