@@ -27,7 +27,7 @@ We can't show you this amazing thing.</iframe>
    <!--if .mp3 files aren't compatible, a browser will try the .ogg format--> 
 </audio> 
 
-// iframe youtube // https://developers.google.com/youtube/youtube_player_demo
+// API youtube // https://developers.google.com/youtube/youtube_player_demo
 
 <iframe id="ytplayer" type="text/html" width="720" height="405"
 src="https://www.youtube.com/embed/Dl3TWRAf3tg?autoplay=1&start=15"
