@@ -27,3 +27,27 @@ my-class {
 .iframe {
   border: none;
 }
+
+// Transform Matrix //
+
+div {
+  transform: matrix(2, 0.2, 1.4, 3, 200, 300);
+} 
+
+// FUNCTIONS //
+
+transform: translate(10px, 20px); /* moves the object 10 pixels to the right 
+                                                                    and 20 pixels down */
+
+transform: scale(1.5, 0.5); /* enlarges the object by a factor of 1.5 
+                                                        horizontally and halves it vertically */
+
+transform: rotate(30deg); /* rotates the object 30 degrees clockwise */
+
+transform: skew(30deg, 40deg); /* skews the top side of the object 30 degrees to the left, the bottom side 30 degrees
+                                  to the right, the left side 40 degrees up, and the right side 40 degrees down */ 
+                                  
+                                  
+                                  
+                                  
+                                  
