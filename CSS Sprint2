@@ -36,18 +36,34 @@ div {
 
 // FUNCTIONS //
 
-transform: translate(10px, 20px); /* moves the object 10 pixels to the right 
-                                                                    and 20 pixels down */
+transform: translate(10px, 20px); /* moves the object 10 pixels to the right and 20 pixels down */
 
-transform: scale(1.5, 0.5); /* enlarges the object by a factor of 1.5 
-                                                        horizontally and halves it vertically */
+transform: scale(1.5, 0.5); /* enlarges the object by a factor of 1.5 horizontally and halves it vertically */
 
 transform: rotate(30deg); /* rotates the object 30 degrees clockwise */
 
 transform: skew(30deg, 40deg); /* skews the top side of the object 30 degrees to the left, the bottom side 30 degrees
                                   to the right, the left side 40 degrees up, and the right side 40 degrees down */ 
                                   
+// TRANSITION //
+
+div {
+    background-color: black;
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: 2s;
+}
+
+// Yukarıdaki ile aynı tek farkı tek satırda yazılıyor propertyler i parantezde tagleri yazıyor //
+div {
+    background-color: black;
+    transition: background-color(transition-property) 1s(Transition-duration) linear (Transition-timing-function) 2s(transition-delay);
+}
+
+div:hover {
+    background-color: white;
+} 
                                   
-                                  
-                                  
+                      
                                   
