@@ -64,6 +64,16 @@ div {
 div:hover {
     background-color: white;
 } 
+
+// * SHADOWS * //
+
+div {
+  box-shadow: 5px 6px 7px red;       /* Horizontal , Vertical , Blur, shadow color */
+}
+
+h1 {
+  text-shadow: 5px 6px 7px red;
+} 
                                   
 
 // SPRINT 2 CSS  //
