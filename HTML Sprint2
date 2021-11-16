@@ -33,4 +33,90 @@ We can't show you this amazing thing.</iframe>
 src="https://www.youtube.com/embed/Dl3TWRAf3tg?autoplay=1&start=15"
 frameborder="0" allowfullscreen>
 
+// SPRINT 2 -  Form html //
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Layouts and Forms</title>
+  <link rel="stylesheet" href="https://code.s3.yandex.net/web-code/normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fonts.css">
+</head>
+<body>
+  <div class="page">
+    <section class="form">
+      <div class="form__toggle">
+        <img class="form__toggle-image" src="https://pictures.s3.yandex.net/html-forms/close_icon.png">
+      </div>
+      <div class="form__container">
+        <form class="form__admin">     
+          <div class="form__main-container">
+            <h2 class="form__heading">Choose your settings</h2>
+            <fieldset class="form__input-container form__input-container_ctrl_texts">
+              <label class="form__label" for="heading">Heading</label>
+              <input type="text" class="form__item form__item_el_heading" id="heading" name="heading">
+              <label class="form__label" for="subheading">Subheading</label>
+              <input type="text" class="form__item form__item_el_subheading" id="subheading" name="subheading">
+              <label class="form__label" for="main-text">Main text</label>
+              <textarea class="form__item form__item_el_main-text" id="main-text" name="main-text"></textarea>
+              <label class="form__label" for="email">E-mail</label>
+              <input type="email" class="form__item form__item_el_email" id="email" name="email">
+            </fieldset>
+            <div class="form__line"></div>
+            <fieldset class="form__input-container form__input-container_ctrl_visual">
+              <label class="form__label" for="font-family">Font family</label>
+              <select class="form__item form__item_el_font-family" id="font-family" name="font-family">
+                <option value="ibm">IBM Plex Serif</option>
+                <option value="ubuntu">Ubuntu</option>
+                <option value="istok">Istok Web</option>
+              </select>
+              
+              <label class="form__label" for="heading-font-size">Heading font size</label>
+              <input type="number" class="form__item form__item_el_heading-fontsize" min="24" max="80" id="heading-font-size" name="heading-font-size" value="32">
+              <label class="form__label" for="text-font-size">Text font size</label>
+              <input type="number" class="form__item form__item_el_text-fontsize" min="12" max="40" id="text-font-size" name="text-font-size" value="24">
+              <label class="form__label" for="pub-date">Publication Date</label>
+              <input type="date" class="form__item form__item_el_pubdate" id="pub-date" name="pub-date">
+              
+              <label class="form__label" for="image">Article cover</label>
+              <select class="form__item form__item_el_image" id="image" name="image">
+                <option value="bombardier">Bombardier CS300</option>
+                <option value="hobbit">Hobbit-themed Boeing 777</option>
+                <option value="tiger">Amur Tiger Boeing 747</option>
+              </select>
+            </fieldset>  
+            <fieldset class="form__input-container form__input-container_ctrl_additional">
+              <h3 class="form__heading form__heading_type_ctrl-el-heading">Number of columns</h3>
+            <input type="radio" name="number-of-columns" id="one-column" value="one-column" class="form__item form__item_el_number-of-columns" checked>
+              <label for="one-column" class="form__label form__label_direction_right">1</label>
 
+              <input type="radio" name="number-of-columns" id="two-columns" value="two-columns" class="form__item form__item_el_number-of-columns" checked>
+              <label for="two-columns" class="form__label form__label_direction_right">2</label>
+              
+              <label class="form__label" for="text-color">Text color</label>
+              <input type="color" class="form__item form__item_el_text-color" id="text-color" name="text-color" value="#979797">
+              <label class="form__label" for="content-width">Content width</label>
+              <input type="range" class="form__item form__item_el_content-width" min="30" max="80" step="10" id="content-width" name="content-width">
+              <h3 class="form__heading form__heading_type_ctrl-el-heading">Additional options</h3>
+              
+                <input type="checkbox" name="extra-option" id="black-background" value="black-background" class="form__item form__item_el_extra-options" checked>
+              <label class="form__label form__label_direction_right" for="black-background">Black background</label>
+            
+                <input type="checkbox" name="extra-option" id="bold-heading" value="bold-heading" class="form__item form__item_el_extra-options" checked>
+                <label class="form__label form__label_direction_right" for="bold-heading">Bold heading</label>
+             
+            </fieldset>
+            
+          </div>
+          <fieldset class="form__handlers">
+            <button type="submit" class="form__button">Submit</button>
+            <button type="reset" class="form__button">Reset</button>
+          </fieldset>  
+        </form>
+      </div>
+    </section>
+   </div>
+</body>
+</html>
