@@ -37,6 +37,8 @@ div {
 
 
 
+
+
 // FUNCTIONS //
 
 transform: translate(10px, 20px); /* moves the object 10 pixels to the right and 20 pixels down */
@@ -140,6 +142,23 @@ div {
   animation: move 2s ease-in-out 1s 3 reverse forwards running;
 } 
 
+
+Form özellik ekleme kutu renklendirme vs
+input:focus { /* styles for the active field */ } 
+
+input:focus { outline-color: yellow; outline-style: dashed; outline-width: 3px; } 
+veya outline yerine border
+input:focus { outline: none; border: 1px solid red; } 
+
+Attribute selectors 
+any-selector[any-attribute-name="any-attribute-value"] {
+    /* ... */
+} 
+
+/* alttakinde dikkat <input> değişir <submit> olursa baştaki değer de değişecek. */ 
+input[type="submit"] {
+    /* styles for the submit button */
+}  
 
 // SPRINT 2 CSS  //
 
