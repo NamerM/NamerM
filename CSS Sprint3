@@ -2,9 +2,27 @@
 .periodic-table__grid {
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(8, 100px);
+  grid-template-columns:  repeat(8, 100px);
+  grid-column: 8;
   grid-template-rows: repeat(5, 100px);
   grid-gap: 10px;
   max-width: 1200px;
   justify-content: center;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: 100px 100px 150px;
+    grid-template-rows: 150px 150px 100px;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;   //  grid-gap: 10px 20px;  //
+} 
+
+// REPEAT FUNCTION //
+repeat(5, 20%); 200px;  / 6 column var/
+
+// FRACTIONS //
+.container {
+    width: 600px;
+    grid-template-columns: 100px 2fr 3fr;
+} 
