@@ -62,3 +62,12 @@ selector {
     width: calc(100% / 3);
     height: calc((100vh + 300px) / 2);
 } 
+
+// Percentages of margins & padding
+.block {
+    width: 30%;
+}
+.block__image {
+    width: 100%;
+    padding-bottom: 100%;
+} 
