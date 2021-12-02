@@ -20,4 +20,4 @@
 // SVG leri <img> ile kullanmak  daha mantıklı */ 
 
 /* metatags for smooth scaling */
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
