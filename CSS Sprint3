@@ -73,10 +73,12 @@ selector {
 } 
 
 // Fontsize etc//
+html {
+    font-size: 30px;  /* root font size is 30px */
+}
 .parent {
     font-size: 24px;
 }
-
 .child {
-    font-size: 2em;
+    font-size: 2em;  /* fontsize is 48px */
 } 
