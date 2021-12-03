@@ -92,3 +92,50 @@ html {
 -webkit-font-smoothing: antialiased; 
 
 text-rendering: optimizeLegibility; 
+
+// MEDIA QUERRIES //
+@media (condition1) and (condition2) {
+    selector {
+        property: value;
+    }
+} 
+
+@media screen and (max-width:425px) {
+  .content__columns {
+    flex-direction: column;
+  }
+  .content__column {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  .cover__title {
+    font-size: 4rem;
+  }
+  .cover__subheading {
+    font-size: 0.8rem;
+  }
+}
+
+/// code for screen size //
+/* main code for a resolution of 1024px */
+@media (min-width : 2560px) {
+    /* styles for large monitors with a resolution of 4K */
+}
+@media (min-width : 1440px) {
+    /* styles for large desktops and laptops */
+}
+@media screen and (max-width: 1024px) {
+    /* styles for tablets in landscape orientation */
+}
+@media (max-width : 768px) {
+    /* styles for tablets */
+}
+@media (max-width : 425px) {
+    /* styles for large smartphones */
+}
+@media (max-width : 375px) {
+    /* styles for medium-sized smartphones */
+}
+@media (max-width : 320px) {
+    /* styles for small smartphones */
+}
