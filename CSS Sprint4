@@ -1,0 +1,9 @@
+ // Javascript //
+ console.log('All for one, and one for all.');
+ console.log(1 + 999); // the result will be calculated and logged to the console: 1000
+ 
+12 + 13 // addition operator
+44 - 4 // subtraction operator
+19 * 3 // multiplication operator
+57 / 3 // division operator
+
