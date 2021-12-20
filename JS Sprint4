@@ -13,4 +13,6 @@ console.log(5 % 1); // 0
 console.log(3 % 2); // 1
 console.log(11 % 4); // 3  Bölme işleminde kalanı gösterir buçuklara girmeden 
 
-
+console.log("word");
+console.log('Not just a word, but a whole sentence.');
+console.log('1984'); // a number that appears inside quotation marks is a string
