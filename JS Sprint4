@@ -6,4 +6,11 @@
 44 - 4 // subtraction operator
 19 * 3 // multiplication operator
 57 / 3 // division operator
+console.log(24 / 24 - 12); // -11   * & / and - & +  , () 1st BODMAS rule 
+console.log(2 ** 4); // 16   2 üzeri 4
+
+console.log(5 % 1); // 0
+console.log(3 % 2); // 1
+console.log(11 % 4); // 3  Bölme işleminde kalanı gösterir buçuklara girmeden 
+
 
