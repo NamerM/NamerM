@@ -1,4 +1,5 @@
  // Javascript //
+ alert("Hello, World!);  // opens modal window
  console.log('All for one, and one for all.');
  console.log(1 + 999); // the result will be calculated and logged to the console: 1000
  
@@ -16,3 +17,16 @@ console.log(11 % 4); // 3  Bölme işleminde kalanı gösterir buçuklara girmed
 console.log("word");
 console.log('Not just a word, but a whole sentence.');
 console.log('1984'); // a number that appears inside quotation marks is a string
+
+console.log("The Republic of Côte d'Ivoire");
+console.log('Never Say "Never" Again');
+console.log("Never Say \"Never\" Again"); //  \ infront to keep the code working 
+
+console.log("Java" + "Script");     // "JavaScript"   // Concatenation
+console.log(100 + 500);     // here we're adding two numbers, so the result is a number: 600
+console.log(100 + "500");     // we're concatenating a number and a string, which results in a string: '100500'
+
+console.log(`A stitch in time saves ${10 - 1}.`); // "A stitch in time saves 9." // Template Literals
+
+
+
