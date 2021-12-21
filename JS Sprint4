@@ -26,7 +26,7 @@ console.log("Java" + "Script");     // "JavaScript"   // Concatenation
 console.log(100 + 500);     // here we're adding two numbers, so the result is a number: 600
 console.log(100 + "500");     // we're concatenating a number and a string, which results in a string: '100500'
 
-console.log(`A stitch in time saves ${10 - 1}.`); // "A stitch in time saves 9." // TEMPLATE LITERAL
+console.log(`A stitch in time saves ${10 - 1}.`); // "A stitch in time saves 9." // TEMPLATE LITERAL  BACKTIK siz olmaz ``
 
 // VARIABLES //
 let olympicChampion;
@@ -50,7 +50,7 @@ console.log("From " + hours + ":00, there will be a " + discount + "% discount o
 
 // "From 19:00, there will be a 20% discount on all flights"
 
-// Let's print a message about the current discount
+// Let's print a message about the current discount ****
 console.log(`From ${hours}:00, there will be a ${discount}% discount on all flights`);
 
 // "From 19:00, there will be a 20% discount on all flights"
