@@ -26,7 +26,52 @@ console.log("Java" + "Script");     // "JavaScript"   // Concatenation
 console.log(100 + 500);     // here we're adding two numbers, so the result is a number: 600
 console.log(100 + "500");     // we're concatenating a number and a string, which results in a string: '100500'
 
-console.log(`A stitch in time saves ${10 - 1}.`); // "A stitch in time saves 9." // Template Literals
+console.log(`A stitch in time saves ${10 - 1}.`); // "A stitch in time saves 9." // TEMPLATE LITERAL
 
+// VARIABLES //
+let olympicChampion;
+olympicChampion = "Great Britain"; // or you can add it later, without using the let keyword
+olympicChampion = "Brazil"; // you can change the variable's value at any time 
+console.log(olympicChampion); // Brazil 
 
+// IF + CONCATENATION  //
+let hours = 19; // Current time in hours
+
+// Now we're going to set a flight discount that gets progressively larger over time:
+// From 6 to 9 p.m. the discount increases by 10% every hour
+let discount = 0;
+
+if (hours >= 18 && hours <= 21) {
+    discount = (hours - 17) * 10;
+}
+
+// Let's print a message about the current discount
+console.log("From " + hours + ":00, there will be a " + discount + "% discount on all flights.");
+
+// "From 19:00, there will be a 20% discount on all flights"
+
+// Let's print a message about the current discount
+console.log(`From ${hours}:00, there will be a ${discount}% discount on all flights`);
+
+// "From 19:00, there will be a 20% discount on all flights"
+
+// SHORTHAND //
+// option 1
+let year1 = 365;
+year1 = year1 + 1; // 366 
+// option 2
+let year2 = 365;
+year2 += 1; // 366 — this code does the exact same thing
+
+let num1 = 10;
+num1 += 1; // 11
+
+let num2 = 10;
+num2 -= 1; // 9
+
+let num3 = 10;
+num3 *= 2; // 20
+
+let num4 = 10;
+num4 /= 2; // 5 
 
