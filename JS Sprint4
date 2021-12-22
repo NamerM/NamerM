@@ -75,3 +75,68 @@ num3 *= 2; // 20
 let num4 = 10;
 num4 /= 2; // 5 
 
+//COMPARISON //
+console.log(7 > 6); // true — greater than
+console.log(7 < 6); // false — less than
+console.log(7 >= 6); // true — greater than or equal
+console.log(7 <= 6); // false — less than or equal
+console.log(7 == 6); // false — equality
+console.log(7 != 6); // true — inequality
+console.log(7 === 6); // false — identity (strict equality)
+console.log(7 !== 6); // true — non-identity (strict inequality)
+
+console.log("123" == 123); // true
+console.log("123" === 123); // false
+
+console.log("all that glitters" === "gold"); // false — these are two different strings
+console.log("2" !== 2); // true — the string "2" is not identical to the number 2
+console.log("2" == 2); // true — the string "2" is equal in value to the number 2
+console.log(3 != 2); // true - 3 is not equal to 2
+
+// IF  - Conditions //
+
+let stockPrice = 644;
+
+if (stockPrice > 800) {
+  console.log("Time to sell");
+} else if (stockPrice > 650) {
+  console.log("Hold and wait for the price to go up");
+} else if (stockPrice > 500) {
+  console.log("So cheap, must buy more stocks");
+} else {
+  console.log("All in");
+}
+// "So cheap, must buy more stocks"
+// Disclaimer: This if statement does not constitute investment advice
+
+
+//BOOLEAN & LOGIC
+let merry = true;
+console.log(!merry); // false   ! means negation - turns true to false, false to true.
+
+let christmas = false;
+console.log(!christmas); // true
+
+// LOGIC AND &&
+let merry = true;
+let christmas = false;
+
+console.log(merry && christmas); // false  && returns true if both are true
+
+//LOGIC OR ||
+console.log(merry || christmas); // true 
+
+
+//ARRAYS 
+let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+// this array contains all the months of the year
+months[1]; // 'February'
+
+months.length; // 12
+
+[].length; // 0 - an empty array contains no elements, and its length is 0
+['Jan','Feb','Mar'].length; // 3 — the array has three elements, so its length is 3
+months[months.length - 1] // Mar - we have to subtract 1 from the length because an array's index starts at 0
+
+Elements in the array should be replaced or added as follows:
+morningList[element_index] = new_value;  // [number] = replaced value .
