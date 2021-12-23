@@ -140,3 +140,29 @@ months[months.length - 1] // Mar - we have to subtract 1 from the length because
 
 Elements in the array should be replaced or added as follows:
 morningList[element_index] = new_value;  // [number] = replaced value .
+
+
+//LOOPs
+
+//While Loop
+let number = 10;
+
+while (number <= 20) {
+    console.log(number);
+    number += 2;
+}
+
+//if Loop   // for(initialization; condition; final expression)
+
+for (let i = 0; i <= 10; i++) {
+  console.log(i);
+}
+
+//do...while loop
+
+let number = 21;
+
+do {
+    console.log(number);
+} while (number <= 20);
+
