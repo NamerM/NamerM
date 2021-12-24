@@ -22,7 +22,7 @@ console.log("The Republic of Côte d'Ivoire");
 console.log('Never Say "Never" Again');
 console.log("Never Say \"Never\" Again"); //  \ infront to keep the code working 
 
-console.log("Java" + "Script");     // "JavaScript"   // Concatenation
+console.log("Java" + "Script");     // "JavaScript"   // CONCATENATION
 console.log(100 + 500);     // here we're adding two numbers, so the result is a number: 600
 console.log(100 + "500");     // we're concatenating a number and a string, which results in a string: '100500'
 
@@ -166,3 +166,34 @@ do {
     console.log(number);
 } while (number <= 20);
 
+
+//PARAMETERS
+function keepScore(ours, theirs) {
+    // Let's check whether our team has scored more goals:
+    if (ours > theirs) {
+        console.log("We won! 😃 The score was " + ours + "-" + theirs);
+
+        // If we didn't score more goals than they did,
+        // maybe we scored the same amount? Check it:
+    } else if (ours === theirs) {
+        console.log("It's a draw. 😐 The score was " + ours + "-" + theirs);
+
+        // If neither of the previous two conditions were met,
+        // it must mean that we scored fewer goals :(
+    } else {
+        console.log("We lost... 😢 The score was " + ours + "-" + theirs);
+    }
+}
+
+// RETURN   - after return function stops.
+
+function sayHey(name) {
+    // The code for how the input data will be transformed
+    let greeting = 'Hey ' + name;
+    // Let's return the result
+    return greeting;    
+}
+
+let siriGreeting = sayHey("Siri");
+
+console.log(siriGreeting); // "Hey Siri"
