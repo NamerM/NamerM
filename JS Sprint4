@@ -223,3 +223,48 @@ function printCustomerInfo(person) {
   console.log(person.name + " is " + person.age + " years old.");
 }
 
+/// Document Object Model  ///
+
+<!-- index.html -->
+
+<main id="container">
+    <div class="content">
+        <div class="content__item"></div>
+        <div class="content__item"></div>
+        <div class="content__item"></div>
+    </div>
+</main>
+
+/* script.js */
+
+let container = document.querySelector("#container");
+let content = container.querySelector(".content");
+let contentItem = content.querySelector(".content__item");
+
+console.log(contentItem); // Will log: <div class="content__item"></div>
+
+let contentItems = content.querySelectorAll(".content__item");
+
+console.log(contentItems); /* Will log all elements with the .content__item class */
+
+//// old usage \\\
+getElementByID() // getElementsByClassName() // getElementsByTagName() - old ones////
+// Searching for an element by its ID using querySelector
+let container1 = document.querySelector("#container");
+
+// Searching for an element by its ID using getElementById
+let container2 = document.getElementById("container");
+
+// Checking whether these elements are identical to each other
+console.log(container1 === container2); // true - these elements are identical
+////____\\\\
+
+/// ATTRIBUTES \\\ 
+ getAttribute()  // Retrieve an attribute's value
+ hasAttribute() //Check if an element has a certain attribute 
+ setAttribute() // Set the value of an attribute  
+ removeAttribute() // Remove an attribute  
+
+
+
+
