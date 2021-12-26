@@ -197,3 +197,29 @@ function sayHey(name) {
 let siriGreeting = sayHey("Siri");
 
 console.log(siriGreeting); // "Hey Siri"
+
+
+/// OBJECTS /// 
+
+let myObject = {
+    stringKey: 'value', // property
+    numberKey: 4, // also a property
+    booleanKey: true, // yet another property
+  methodKey: function consoleKitten() { // and here we have a method
+        console.log('kitten!');
+    }
+};
+
+//sample
+let customer = {
+  name: 'Elise Bouer', // the property value is a string
+  age: 24, // the property value is a number
+  greet: function () { // the property value is a function
+    console.log("Hello customer!")
+  }
+};
+
+function printCustomerInfo(person) {
+  console.log(person.name + " is " + person.age + " years old.");
+}
+
