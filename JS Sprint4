@@ -265,6 +265,38 @@ console.log(container1 === container2); // true - these elements are identical
  setAttribute() // Set the value of an attribute  
  removeAttribute() // Remove an attribute  
 
+////
+<button id="big-red-button" onclick="alert('KABOOM!');" disabled>
+    A big red button
+</button>
+
+// search the button by ID and store it in the bigAndRed variable
+let bigAndRed = document.querySelector("#big-red-button");
+
+// inspecting the button element via the getAttribute() method
+bigAndRed.getAttribute("lang"); // null
+bigAndRed.getAttribute("a non-existent attribute"); // null
+bigAndRed.getAttribute("disabled"); // ''
+
+// checking for attributes
+bigAndRed.hasAttribute("onclick"); // true
+bigAndRed.hasAttribute("a non-existent attribute"); // false
+bigAndRed.hasAttribute("disabled"); // true
+
+//set attribute
+bigAndRed.setAttribute("lang", "en");
+сonsole.log(bigAndRed.hasAttribute("lang")); //true
+
+disabledCheckbox.setAttribute("disabled", true); // Deactivating the checkbox.  ( disabled'tan sonra 2. parametre olmak zorunda  , true, false veya " bir metin ")
+
+//Changing style of the html elements:
+someElement.setAttribute("style", "background-color: #000000");
+
+// remove attibute
+bigAndRed.hasAttribute("disabled"); // true
+bigAndRed.removeAttribute("disabled"); // removes the attribute from the element
+bigAndRed.hasAttribute("disabled"); // false
+
 
 
 
