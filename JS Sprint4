@@ -223,7 +223,9 @@ function printCustomerInfo(person) {
   console.log(person.name + " is " + person.age + " years old.");
 }
 
-/// Document Object Model  ///
+
+
+/// DOCUMENT OBJECT MODEL  ///
 
 <!-- index.html -->
 
@@ -258,6 +260,8 @@ let container2 = document.getElementById("container");
 // Checking whether these elements are identical to each other
 console.log(container1 === container2); // true - these elements are identical
 ////____\\\\
+
+
 
 /// ATTRIBUTES \\\ 
  getAttribute()  // Retrieve an attribute's value
@@ -297,6 +301,71 @@ bigAndRed.hasAttribute("disabled"); // true
 bigAndRed.removeAttribute("disabled"); // removes the attribute from the element
 bigAndRed.hasAttribute("disabled"); // false
 
+// Built-in Properties
+<!-- index.html -->
+<div id="owl">Owl</div> <!-- this is an element -->
+/* script.js */
+let owl = document.querySelector("#owl"); // this is an object :: While an element becomes an object, its attributes turn into properties.
 
+
+/// CSS Attributes
+<!-- The manufacturers of Her Majesty's Cars are written in the class names -->
+<div class="bentley rolls-royce">The Royal Garage</div>
+
+/* Let's get a list of Her Majesty's Cars by searching
+for the corresponding element via the .bentley selector */
+
+let garage = document.querySelector(".bentley");    // template literal
+console.log(`Her Majesty's Garage: ${garage.classList}`); // Her Majesty's Garage: bentley rolls-royce
+
+///// contains()
+let garage = document.querySelector(".bentley");
+
+garage.classList.contains("bentley"); // true — Her Majesty has a Bentley 
+garage.classList.contains("jaguar"); // false — Her Majesty does not have a Jaguar
+
+///// add()
+// a Jaguar has been delivered to The Royal Garage 
+garage.classList.add("jaguar");
+
+console.log(`Her Majesty's Garage: ${garage.classList}`); // bentley rolls-royce jaguar
+
+/// remove()
+
+garage.classList.remove("jaguar"); // Her Majesty has grown tired of the Jaguar
+
+console.log(`Her Majesty's Garage: ${garage.classList}`); // bentley rolls-royce
+
+/// toggle()
+// If there's a Jaguar, we must dispose of it   (if there is not a Jaguar it will add)
+garage.classList.toggle("jaguar");
+
+console.log(`Her Majesty's Garage: ${garage.classList}`); // bentley rolls-royce
+
+
+///innetHTML textContent
+
+document.body.innerHTML = "<div>Let's add some HTML</div>"; // Now the page has this div element and nothing else. If there's some other code in the document before using this property, this new code will replace it.
+document.body.innerHTML = ""; // you can delete the whole content of an element by changing the value of this property to an empty string
+
+
+///textContent  - suggested only for elements without children - only with text!!!
+<p id="paragraph">This is the text inside the element.</p>
+
+let paragraph = document.getElementById("paragraph");   /document.queryselector("paragraph"); 
+console.log(paragraph.textContent); // "This is the text inside the element."
+paragraph.textContent = "And this is the new text."; // you can change the text content like this
+
+innerText - ignores hidden texts and just changes the one it sees, 
+<p id="paragraph">
+    This is the text inside the element.
+    <span style="display: none;">This text is invisible.</span>
+</p>
+let paragraph = document.getElementById("paragraph");
+
+console.log(paragraph.innerText); // This is the text inside the element.
+console.log(paragraph.textContent);
+/* This is the text inside the element.
+This text is invisible. */
 
 
