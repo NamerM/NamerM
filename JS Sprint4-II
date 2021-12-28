@@ -145,3 +145,19 @@ This text is invisible. */
 /// EVENT LISTENER
 element.addEventListener(eventName, handler);  //eventName = click, mouseover, mouseout, scroll    handler =  function that will be called for the event
 
+//Sample//
+let element = document.querySelector(".my-element");
+
+function showClick() {
+    console.log("You have clicked on the element");
+}
+
+element.addEventListener("click", showClick);
+
+// Sample : if we are going to use the function only one time, we can code function in EventListener.
+let element = document.querySelector(".my-element");
+
+element.addEventListener("click", function () {
+    console.log("You have clicked on the element");
+});
+
