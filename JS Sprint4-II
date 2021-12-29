@@ -162,3 +162,25 @@ element.addEventListener("click", function () {
 });
 
  
+ ///insertAdjacementHTML & insertAdhacementText
+ 
+ zoo.insertAdjacentHTML('beforeend', '<div class="tiger"></div>'); 
+ "beforeend"
+ "beforebegin"
+ "afterbegin"
+ "afterend"
+ 
+let elephant = document.querySelector(".elephant");
+
+// Set a value for its name property, and print it to the console
+elephant.name = "Dumbo";
+console.log(elephant.name); // Dumbo
+
+// Find the "zoo" element via .querySelector
+let zoo = document.querySelector(".zoo");
+
+zoo.insertAdjacentHTML("beforeend", "<div class='tiger'></div>");
+
+// Find the "elephant" element once more and print its name to the console
+elephant = document.querySelector(".elephant");
+console.log(elephant.name); // Dumbo
