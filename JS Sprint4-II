@@ -117,7 +117,7 @@ garage.classList.toggle("jaguar");
 console.log(`Her Majesty's Garage: ${garage.classList}`); // bentley rolls-royce
 
 
-///innetHTML textContent
+///innerHTML textContent
 ***BACK TICK ile birkaç satır kod konulanibiliyor ''  yerine ``
 document.body.innerHTML = "<div>Let's add some HTML</div>"; // Now the page has this div element and nothing else. If there's some other code in the document before using this property, this new code will replace it.
 document.body.innerHTML = ""; // you can delete the whole content of an element by changing the value of this property to an empty string
@@ -184,3 +184,17 @@ zoo.insertAdjacentHTML("beforeend", "<div class='tiger'></div>");
 // Find the "elephant" element once more and print its name to the console
 elephant = document.querySelector(".elephant");
 console.log(elephant.name); // Dumbo
+
+//console.dir() method
+
+console.dir(document.body);  // method will display the list of properties and methods of the object that you pass through it.
+
+// getting input values
+/* script.js */
+let inputs = document.querySelectorAll("input");
+
+console.log(inputs[0].value); // "I'm Not In Love"
+console.log(inputs[1].value); // "10cc"
+
+//finding value of an input with typeof & querySelector
+console.log(typeof document.querySelector(".input__text_type_artist").value);
