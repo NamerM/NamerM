@@ -1,0 +1,8 @@
+*** let & const vs var ***
+Try to use constants wherever possible. Only use let if you know that the value of your variable will need to be changed at some point.
+
+*** Primitive Dataypes & typeof
+String, Number, BigInt( huge number), Boolean - which can be true or false, undefined, null, Symbol
+
+**typeof : checks type - returns string. The returned or checked data called 'opeerand'.
+  typeof 10; // number  -- typeof "Hello"; // "string" etc.
