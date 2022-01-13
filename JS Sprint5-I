@@ -6,3 +6,11 @@ String, Number, BigInt( huge number), Boolean - which can be true or false, unde
 
 **typeof : checks type - returns string. The returned or checked data called 'opeerand'.
   typeof 10; // number  -- typeof "Hello"; // "string" etc.
+  typeof true; // "boolean" -- typeof undefined; // "undefined"  
+  typeof (10 + 5) // "number" -- typeof 10 + 5 // "number5"
+  typeof NaN; // "number" - Yes, "Not a Number" is actually a "number".
+  typeof null; // "object" - This is actually an officially recognized bug in JavaScript, but they decided not to fix it to avoid backward compatibility issues.
+  typeof function () {} // "function" - Even though there's no such data type.
+  
+*** Lonely Data Types:  undefined && null ***
+  no value assigned , returns a value of undefined.
