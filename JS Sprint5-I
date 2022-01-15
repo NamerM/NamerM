@@ -14,3 +14,16 @@ String, Number, BigInt( huge number), Boolean - which can be true or false, unde
   
 *** Lonely Data Types:  undefined && null ***
   no value assigned , returns a value of undefined.
+
+***Strings ***
+console.log("ABCDEFGHIJKLMNOPQRSTUVWXYZ".length);  // 26
+console.log("espresso"[0]); // "e"   --- console.log("espresso"[2]); // "p"
+
+--
+let georgianaAugustaKeats = "";
+
+for (let i = 0; i < acrostic.length; i += 1) {
+georgianaAugustaKeats += acrostic[i][0];   /* add every first character of every string in the array to the georgianaAugustaKeats variable */
+}
+console.log(georgianaAugustaKeats);
+--
