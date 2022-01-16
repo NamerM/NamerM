@@ -61,9 +61,20 @@ Number.isFinite(Infinity); // false  -- Number.isFinite(-Infinity); // false -- 
 console.log(typeof NaN); // "number"
 Number.isNaN(NaN); // true  -- console.log(Number.isNaN(0 / 0)); // true
 
-*** Math **
+*** MATH - Math ***
 Math.floor(9.99) // 9  -- Math.Ceil(9,01); // 10 --- Math.round(9.51); // 10 
 Math.max(1, 2, 3, 4, 5); // 5 --- Math.random(); // 0,3145616489657988513656
 
+*** parseInt() ***
+parseInt("99 Red Balloons"); // 99 -- parseInt("Catch 22"); // NaN
+radix
 
+*** parseFloat() ***
+parseFloat('98.6'); // 98,6
+
+
+***Number.isInteger() ***
+const eightAndAHalf = 8.5;
+Number.isInteger(eightAndAHalf); // false
+Number.isInteger(Math.floor(eightAndAHalf)); // true
 
