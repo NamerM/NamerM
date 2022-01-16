@@ -17,7 +17,7 @@ String, Number, BigInt( huge number), Boolean - which can be true or false, unde
 
 ***Strings ***
 console.log("ABCDEFGHIJKLMNOPQRSTUVWXYZ".length);  // 26
-console.log("espresso"[0]); // "e"   --- console.log("espresso"[2]); // "p"
+console.log("espresso"[0]); // "e"  .. console.log("espresso"[2]); // "p"   -- index burada sayısal konumu 0'dan başlayarak...
 
 --
 let georgianaAugustaKeats = "";
@@ -26,4 +26,34 @@ for (let i = 0; i < acrostic.length; i += 1) {
 georgianaAugustaKeats += acrostic[i][0];   /* add every first character of every string in the array to the georgianaAugustaKeats variable */
 }
 console.log(georgianaAugustaKeats);
---
+-- //second index kullanımı var...
+
+*** indexOf() *** (string teki yerini veriyor)
+"Practicum by Yandex".indexOf("P"); // 0  - aynı harften 1den fazla olsa dahi ilkinin konumunu verir.
+"espresso".indexOf("x"); // -1   olmayan harf için -1
+
+const elements = "Earth, Air, Fire, Water";
+elements.indexOf("Fire"); // 12   Fire 12. indexte başlıyor.
+
+"Racecar".indexOf("R"); // 0  .. "Racecar".indexOf("r"); // 6  Case sensitive
+
+*** includes() ***
+"Harry Potter and the Prisoner of Azkaban".includes("Harry Potter"); // true
+"Teamwork".includes("I"); // false
+
+*** startsWith() & endsWith() ***
+"Vendetta".startsWith("V"); // true  .. "The perfect date".startsWith("Dinner and a movie"); // false
+
+const theRealEnd = "This is not the end"; -- theRealEnd.endsWith("end"); // true
+
+*** toLowerCase() & toUpperCase() ***
+
+*** split()  - used to divide strings into elements of array    "I came. I saw. I conquered.".split(" "); // [ 'I', 'came.', 'I', 'saw.', 'I', 'conquered.' ]
+
+***slice() ***
+"Believe".slice(2, 5); // "lie"
+"Google Translate".slice(7); // "Translate"
+
+
+
+
