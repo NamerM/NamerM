@@ -54,6 +54,16 @@ const theRealEnd = "This is not the end"; -- theRealEnd.endsWith("end"); // true
 "Believe".slice(2, 5); // "lie"
 "Google Translate".slice(7); // "Translate"
 
+***Infinity & isFinite()
+Number.isFinite(Infinity); // false  -- Number.isFinite(-Infinity); // false -- Number.isFinite(1703); // true
+
+*** NaN
+console.log(typeof NaN); // "number"
+Number.isNaN(NaN); // true  -- console.log(Number.isNaN(0 / 0)); // true
+
+*** Math **
+Math.floor(9.99) // 9  -- Math.Ceil(9,01); // 10 --- Math.round(9.51); // 10 
+Math.max(1, 2, 3, 4, 5); // 5 --- Math.random(); // 0,3145616489657988513656
 
 
 
