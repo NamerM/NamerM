@@ -109,3 +109,44 @@ Boolean(0) , Boolean("") , Boolean(NaN) , Boolean(undefined) , Boolean(null), Bo
 
 *** Logical Operators ***
 ! — logical NOT  // || — logical OR  //  && — logical AND
+
+--- Logical Not Operator (!) 
+!false // true    ---- !(3 > 2) === 3 <= 2;  // true - it turned 1st into false === false 
+
+let password = "JavaScript";
+function checkPassword(pass) {
+    if (pass !== password) {
+        console.log("Wrong password");
+        return;
+    }  // If the user passes an incorrect password, the function will log "Wrong password" and return, meaning it will stop the function.
+
+    console.log("Correct password");
+}
+checkPassword("java script"); // "Wrong password"
+checkPassword("JavaScript"); // "Correct password"
+
+--- Logical Or Operator (||)  - Returns the first truth value.
+function howDoYouDo(answer) {
+    const result = answer || "fine";
+    return result;
+}
+howDoYouDo("better than ever"); // "better than ever"
+howDoYouDo(); // "fine"
+
+--- Logical And Operator (&&)
+Order Priority : first goes !, then &&, and then ||  (Logical Not, And, Or) 
+
+const optimism = !"Live" && !"Laugh" || "Live, Laugh, Love"; 
+console.log(optimism); // "Live, Laugh, Love"
+
+/* first goes !, then &&, and then || */ 
+First, it evaluates !"Live" → false, then !"Laugh" → false, then false && false → false, and lastly false || "Live, Laugh, Love" → "Live, Laugh, Love".
+******
+
+function checkTheCar (distance, model, damaged, price) {
+    const canBuy = distance <= 100000 && (model === "Ford" || model === "Chevrolet") && !damaged && price <= 10000;
+    return canBuy;
+}
+checkTheCar(50000, "Chevrolet", false, 7000); // true — Yay! It works.
+
+
