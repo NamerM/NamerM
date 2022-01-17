@@ -78,3 +78,34 @@ const eightAndAHalf = 8.5;
 Number.isInteger(eightAndAHalf); // false
 Number.isInteger(Math.floor(eightAndAHalf)); // true
 
+***Implicit Conversion***
+-Conversion to String
+1 + ""; // "1" -- burada baştan "" + ekleyerek gerisini de stringe çevirdi js --- undefined + ""; // "undefined"
+
+-Converstion to Number
+Unary plus.  +"33" // 33  ,  +"-88" // 88  - without a space infron of a non-numerical value
+console.log("3" - 1); // 2 — converted to number -- console.log("2" * 2); // 4 — also converted to number
+console.log("4" / 4); // 1 — again converted to number -- console.log("4" + 4); // 44 — concatenation
+
+-Converstion to Boolean
+const usernameElement = document.querySelector(".username"); // bilgi girilmezse boş element null value oluyor
+if (usernameElement) {
+    console.log("Hello " + usernameElement.textContent); 
+}   /// 
+
+*** Explicit Type Conversion ***
+--- String() ---
+const numberToString = String(2); // "2"    --- const nanToString = String(NaN); // "NaN"  --- const undefinedToString = String(undefined); // "undefined"
+const nullToString = String(null); // "null" --- const booleanToString = String(true); // "true"
+
+--- Number() ---
+const stringToNumber = Number("2"); // 2   ---  const nullToNumber = Number(null); // 0
+const stringToNumber = Number("Always look on the bright side of life."); // NaN  --- const undefinedToNumber = Number(undefined); // NaN
+
+--- Boolean()---
+Boolean(2) , Boolean("any string that isn't empty") , Boolean({}) , Boolean([]) , Boolean(true) // true
+Boolean(0) , Boolean("") , Boolean(NaN) , Boolean(undefined) , Boolean(null), Boolean(false) // false  0/no values always false
+
+
+*** Logical Operators ***
+! — logical NOT  // || — logical OR  //  && — logical AND
