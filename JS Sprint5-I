@@ -149,4 +149,56 @@ function checkTheCar (distance, model, damaged, price) {
 }
 checkTheCar(50000, "Chevrolet", false, 7000); // true — Yay! It works.
 
+**** Switch ****
+const yourNumber = "D135";
+let windowNumber;
 
+switch (yourNumber) {
+    case "D133":
+        windowNumber = 1;
+        break;
+    case "D134":
+        windowNumber = 2;
+        break;
+    case "D135":
+        windowNumber = 3;
+        break;
+    case "D136":
+        windowNumber = 4;
+        break;
+    case "D137":
+        windowNumber = 5;
+}
+
+console.log(windowNumber); // 3   Son 'case' den sonra break ihtiyacı yok zaten kod bittiğinden
+
+-- default ---
+let catName;
+const cartoon = "Garfield and Friends";
+
+switch (cartoon) {
+    case "Shrek 2":
+        catName = "Puss in Boots";
+        break;
+    default:
+        catName = "Garfield";
+}
+
+console.log(catName); // "Garfield"
+
+*** Ternary Operator ***
+/* condition */ ? /* value if true */ : /* value if false */
+const money = 100;
+let activity;
+------- if statement ile daha uzunca ----
+if (money >= 50) {
+    activity = "Go out and party!";
+} else {
+    activity = "Stay in and play a board game.";
+}
+console.log(activity); // "Go out and party!"
+
+---Ternary Operator ile çok daha sade kod yazılıyor , if statements can return multiple statemens - so ternary operatory is better when we return a true or false values:
+const money = 100;
+const activity = money >= 50 ? "Go out and party!" : "Stay in and play a board game.";
+console.log(activity); // "Go out and party!"
