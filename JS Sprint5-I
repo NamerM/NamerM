@@ -202,3 +202,18 @@ console.log(activity); // "Go out and party!"
 const money = 100;
 const activity = money >= 50 ? "Go out and party!" : "Stay in and play a board game.";
 console.log(activity); // "Go out and party!"
+----
+const age = parseInt(prompt("How old are you?"), "");
+console.log(age);
+const voter = age >= 18 ? "You're eligible to vote, go and vote!" : "You are not eligible to vote, try again older."
+console.log(voter);
+-----
+const citizenship = prompt("What's your citizenship?", "the USA");
+const otherDebts = parseInt(prompt("How many loans do you owe to other financial services companies?", "0"), 10);
+const age = parseInt(prompt("How old are you?"), 10);
+
+const ok = (citizenship === "the USA"
+  || citizenship === "United States")
+  && !otherDebts
+  && age >= 21;
+-------
