@@ -198,7 +198,7 @@ if (money >= 50) {
 }
 console.log(activity); // "Go out and party!"
 
----Ternary Operator ile çok daha sade kod yazılıyor , if statements can return multiple statemens - so ternary operatory is better when we return a true or false values:
+---Ternary Operator ile çok daha sade kod yazılıyor , if statements can return multiple statemens - so ternary operatory is better when we return a true||false values:
 const money = 100;
 const activity = money >= 50 ? "Go out and party!" : "Stay in and play a board game.";
 console.log(activity); // "Go out and party!"
@@ -216,4 +216,28 @@ const ok = (citizenship === "the USA"
   || citizenship === "United States")
   && !otherDebts
   && age >= 21;
+  console.log(ok ? "The loan is approved" : "Sorry");
 -------
+
+*** Break & continue
+after a loops console.log - use break so it will not repeat console logging all the values.  " break;  "
+increment operator : i++ , ++  decrement operator: -- 
+
+---continue
+for (let i = 2090; i < 2110; i++) {
+    if (i % 4 === 0) {
+        if (i % 100 === 0) continue; // if the year is divisible by 100, skip it and start from the next iteration
+        console.log("Leap year: " + i);
+    }
+}
+// Leap year: 2092 // Leap year: 2096 // Leap year: 2104 // Leap year: 2108
+/* All leap years from 2090 to 2110 are printed except 2110 */
+
+----
+const password = prompt("Enter the password:", "");
+for (let i = 0; i <= password.length; i++) {
+ if  ( password[i] === "?" ) {
+  console.log ("The password contains ? at character " + (i + 1));
+ break;
+ }
+}
