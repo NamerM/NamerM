@@ -1,0 +1,79 @@
+*** Arrays *** 
+
+--- concat()  - merges arrays
+const toDoList = ["Plant tree", "Build house"];
+const toDoListUpdated = toDoList.concat("Raise children");
+console.log(toDoListUpdated);
+
+// ["Plant tree", "Build house", "Raise children"]
+
+- const usaAttractions = washingtonDCAttractions.concat(newYorkAttractions, sanFranciscoAttractions); //newYorkAttractions & sanFranciscoAttracts arraylerini birleştirir
+
+--- join()  - concatenates elements of an array and returns a new string. The order of elements doesn't change
+const theBeatles = ["John Lennon", "Paul McCartney", "Ringo Starr", "George Harrison"];
+console.log(theBeatles.join());   // "John Lennon,Paul McCartney,Ringo Starr,George Harrison"
+
+console.log(`Introducing the Beatles: ${theBeatles.join(", ")}`);  // "Introducing the Beatles: John Lennon, Paul McCartney, Ringo Starr, George Harrison"
+
+// notice that the original array still looks exactly the same: 
+console.log(theBeatles);  // ["John Lennon", "Paul McCartney", "Ringo Starr", "George Harrison"]
+
+console.log(theBeatles.join(" | "));
+// "John Lennon | Paul McCartney | Ringo Starr | George Harrison" 
+
+--- push() -(LAST Element) Adds element to the end of an array
+const array = [ "lion", "wood"];
+const array.push("tree", "dot"); // [ "lion", "wood", "tree", "dot"];
+
+--- pop() - (LAST Element) Removes the last element in an array and returns - son array elemanını arraydan silerken , array ismiyle yazıldığında o elemanı listeler.
+console.log(array.pop()); // "dot"
+console.log(array); // ["lion", "wood", "tree"];  --** Array boşsa pop() komutu sonrası undefined olur
+
+--- shift() - (FIRST element) Removes the first element. Array empty = undefined at console.log
+const italianCities = ["Pompeii", "Rome", "Naples"];
+const volcanicEruption = italianCities.shift(); // the shift() method returns the removed element **
+console.log(volcanicEruption); // "Pompeii"
+
+console.log(italianCities); // ["Rome", "Naples"]
+
+--- unshift() - Adds elements to the Beginning of an array.
+const governmentLand = ["Department of Defense", "Bureau of Land Management", "National Park Service", "Fish and Wildlife Service", "Forest Service"];
+govermentLand.unshift("Department of Defense", "Bureau of Land Management");
+console.log(governmentLand.length); // 5
+console.log(governmentLand.unshift("Quick question")); // 6  -- length i uzatıyor aynısı ppop ve push sonrası da denenir? 
+
+pop() - push() tercih ediliyor sona değişiklik yaptığı için - başa yapılırsa tüm elemanların yeri - sırası değiştiğinden tercih edilmiyor.
+
+--- slice()
+
+const spring = months.slice(2, 5); // (3.ay)-> 2. indexten 5'e kadar ama 5. index dahil değil
+console.log(spring); // ["March", "April", "May"]
+
+const fourthQuarter = months.slice(9);  //9'dan başlıyor (9. index 10 ay-Ekim)
+fourthQuarter; // ["October", "November", "December"] 
+
+- negative # slice()
+const autumn = months.slice(-4, -1); // (sondan 4. - sonuncu hariç)
+console.log(autumn); // ["September", "October", "November"]
+
+const fourthQuarter = months.slice(-3);     //  -1 -2 -3(sondan 3. den başlıyor )
+console.log(fourthQuarter); // ["October", "November", "December"] 
+
+-- yeni array oluşturma
+const boringTale2 = boringTale.slice();
+console.log(boringTale2); // boringtale2  boringTale'deki arrayleri aynen alır
+
+
+--- splice() -- Belirli arrayleri keserek çıkarma - sıralama normal index gibi 0'dan başlamıyor
+const week = [  "Monday",   "Tuesday",   "Wednesday",  "Thursday",  "Friday",  "Saturday",  "Sunday"];
+
+const removedItems = week.splice(0, 5, "Sunday", "Saturday", "Sunday", "Saturday", "Sunday"); //starting from index 0, delete 5 elements&replace them with these 5 elm.
+console.log(removedItems); // ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] ^replacing removed values is optional
+
+console.log(week); // ["Sunday", "Saturday", "Sunday", "Saturday", "Sunday", "Saturday", "Sunday"]
+
+--- Ekleme
+const planets = [ "Mercury",  "Venus",  "Mars",  "Jupiter",  "Saturn",  "Uranus",  "Neptune"];
+
+planets.splice(2, 0, "Earth"); // []
+console.log(planets); // ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
