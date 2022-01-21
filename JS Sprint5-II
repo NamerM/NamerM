@@ -77,3 +77,77 @@ const planets = [ "Mercury",  "Venus",  "Mars",  "Jupiter",  "Saturn",  "Uranus"
 
 planets.splice(2, 0, "Earth"); // []
 console.log(planets); // ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+
+
+*** Iterating Over an Array.  forEach() & map() Methods
+
+--- forEach() 
+const how = ["harder", "better", "faster", "stronger"];
+
+how.forEach(function (item) {
+    console.log(item + ".");
+}); 
+// pay close attention to the use of parentheses here - notice that the whole function, including the body, is contained within the parentheses of the forEach() method
+/* harder. /  better. /  faster. /   stronger.  */
+
+how.forEach() ===  for (let i = 0, i < how.lenght, // i++ // i+= 1); console.log(how[i] + ".");  // bu loop üstteki forEach(fonskiyon) ile aynı işlevi görüyor.
+-* forEach() 'te break ve continue  kullanılamıyor!!!
+
+--- map()
+const firstArr = [0, 1, 2, 3, 4];
+const secondArr = firstArr.map(function (item) { // here, each element of the firstArr array is passed through the function
+    return item * item; // in this case, we're going to square each element
+}); 
+console.log(secondArr); // [0, 1, 4, 9, 16]   return kullanılmazsa - undefined gösterir consol'da.
+--
+forEach() metodu ile her elemanı tek tek kullanacaksa (iterate through each element) tercih ediyoruz
+map() used for modifying each element and return a new array containing these changes:
+
+const tweets = [
+    {   user: "@TheFlash",
+        date: "Feb 16, 2019",
+        text: "Life doesn't give us purpose. We give life purpose."
+    },
+    {   user: "@Dory",
+        date: "Feb 24, 2019",
+        text: "Just keep swimming."
+    },
+    {   user: "@CookieMonster",
+        date: "Feb 24, 2019",
+        text: "A friend is something better than chocolate ice cream..."
+    }
+];
+const tweetsTextOnly = tweets.map(function (item) {
+    return item.text;
+});
+tweetsTextOnly.forEach(function (item) {
+    console.log(item);
+});
+
+/*  Life doesn't give us purpose. We give life purpose. Just keep swimming. A friend is something better than chocolate ice cream... */
+---task 
+
+
+*** Callback function : callbacks used for array methods have three parameters.    // forEach() & map()
+
+---Parameters 1: The Current Element:
+const jobTitles = [      "Wizard of Light Bulb Moments",    "Ghost Hunter",    "Champagne Tester",    "Legal Bank Robber"];
+jobTitles.forEach(function (item) {   console.log(item);});    // sırayla listeler
+
+---Parameters 2: Index of the Current Item 
+const counter = [ "Emperor", "King", "Casear", "Pharaoh", "Sultan", "Tsar"];
+const counterIndexed = counter.map (function (person, index) { 
+return `${index+1}. ${person}`});
+console.log(counterIndexed);  // "1. Emperor", "2.King" ...
+
+---Parameters3: Original Array
+const kings = [ "Louis I the Fair", "Louis II the Stammerer", "Louis III", "Louis IV Trnasmarinus", "Louis V the Do-Nothing" ];
+const kings Indexed = kings.map(function (item, index, array) {
+const currentIndex = `(${(index+1)} of ${array.length})`;
+return `${item} ${currentIndex}`;
+});
+console.log(kingsIndexed); //  "Louis I the Fair (1 of 5)", "Louis II the Stammerer (2 of 5)", ...
+
+
+
+
