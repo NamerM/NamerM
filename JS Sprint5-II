@@ -256,8 +256,24 @@ diseases.sort(function(a, b) {
 console.log(diseases); /* ["Erythrophobia","Fear of missing out", "Mysophobia"] */
 
 ----
-imperative programming: main goal is to describe the sequence of steps that need to be followed to achieve the desired result.
+**--imperative programming: main goal is to describe the sequence of steps that need to be followed to achieve the desired result.
+const a = [1, 2, 3];
+const b = []; // create a new array
 
-declarative programming: specifies what needs to be achieved without going through the details of how to do it.
+/* iterate through array a by declaring a counter variable, which will increase by 1 after each iteration; once the counter reaches the length of the array, the execution of the loop must stop */
+for (let i = 0; i < a.length; i += 1) {
+  /* we'll refer to the original array elements by indices,   multiply them by 2, and write the result in a new array */
+  b[i] = a[i] * 2;
+}
+console.log(b); // [2, 4, 6]
 
 
+**--declarative programming: specifies what needs to be achieved without going through the details of how to do it.
+
+const a = [1, 2, 3];
+/* create a new array using the original one; elements of a new array have to be the original array elements multiplied by 2 */  
+const b = a.map(function (item) {
+    return item * 2;
+});
+
+console.log(b); // [2, 4, 6]
