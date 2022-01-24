@@ -142,7 +142,7 @@ console.log(counterIndexed);  // "1. Emperor", "2.King" ...
 
 ---Parameters3: Original Array
 const kings = [ "Louis I the Fair", "Louis II the Stammerer", "Louis III", "Louis IV Trnasmarinus", "Louis V the Do-Nothing" ];
-const kings Indexed = kings.map(function (item, index, array) {
+const kingsIndexed = kings.map(function (item, index, array) {
 const currentIndex = `(${(index+1)} of ${array.length})`;
 return `${item} ${currentIndex}`;
 });
@@ -207,4 +207,57 @@ function isPrime(num) {
 return true;
 };
 integersToCheck.every(isPrime);
+----
+
+*** reduce() method
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+const sum = arr.reduce(function (previousValue, item) {
+  // for clarity, log these arguments to the console
+  console.log(`previousValue: ${previousValue}, item: ${item}`);
+  return previousValue + item;
+});
+
+console.log(`sum: ${sum}`);
+
+/*
+ previousValue: 1, item: 2 |  previousValue: 3, item: 3 | previousValue: 6, item: 4 | previousValue: 10, item: 5 |  previousValue: 15, item: 6
+ previousValue: 21, item: 7 |  previousValue: 28, item: 8 |  previousValue: 36, item: 9
+ sum: 45
+*/
+
+-----
+
+***sort() method
+const myNumbers = [0, 3.14, 2.718, 13];
+
+myNumbers.sort(function (a, b) {
+    return a - b;  /* If a less than b, a negative number will be returned. It means that a is to be placed before b in the final array. For example: a = 0, b = 3.14  &  a - b = -3.14     Received a negative number, so a goes before b */
+}); 
+
+console.log(myNumbers); // [0, 2.718, 3.14, 13] — correct for ascending order return b - a for descending order
+
+-- sort() strings with not a number type:
+
+const diseases = [
+    "Mysophobia",   "Fear of missing out", "Erythrophobia"
+];
+
+diseases.sort(function(a, b) {
+  /* let's convert the strings to lowercase to ensure the comparison works */ 
+  a = a.toLowerCase();
+  b = b.toLowerCase();
+
+    if (a < b) return -1; // a will come before b
+    if (b < a) return 1; // b will come before a
+  return 0;
+});
+
+console.log(diseases); /* ["Erythrophobia","Fear of missing out", "Mysophobia"] */
+
+----
+imperative programming: main goal is to describe the sequence of steps that need to be followed to achieve the desired result.
+
+declarative programming: specifies what needs to be achieved without going through the details of how to do it.
+
 
