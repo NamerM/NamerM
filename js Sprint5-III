@@ -76,3 +76,37 @@ const helloWorld = makeHelloWorld();
 console.log(helloWorld);
 helloWorld(); // "Hello world!"
 ---
+
+Arrow Functions
+---
+/* the following functions are identical */
+const singleAnecdote = (joke) => {
+    return `I know only one joke: ${joke}`;
+};
+
+const shorterSingleAnecdote = (joke) => `I know only one joke: ${joke}`;   //If the return statement is the only thing in the body of the function, you can omit the curly braces and the return keyword:
+---
+
+// when the arrow function has multiple parameters, they're placed inside parentheses  
+const boatDeparture = (eater, food) => {
+    console.log(`a ${eater} and a ${food} cross the river in a boat`);    
+};
+boatDeparture("goat", "cabbage"); // a goat and a cabbage cross the river in a boat
+
+// parentheses are optional if there's only one parameter
+const boatArrival = survivor => {
+    console.log(`only the ${survivor} will make it to the riverbank`);
+}; 
+boatArrival("goat"); // only the goat will make it to the riverbank
+---
+const array = [1, 2, 3, 4];
+
+array.forEach(() => {
+    console.log("The button has been pressed");
+}); //callbacks  of arrow function
+---
+
+const array = [1, 2, 3, 4];
+
+const newArray = array.map(elem => elem * 2)
+
