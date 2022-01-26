@@ -1,1 +1,78 @@
+***functions
 
+function multiply(a, b) { // this function takes factors as arguments
+  return a * b; // and returns a value - the result of multiplying a and b
+}
+multiply(2, 3); // 6
+
+--Scope  : Scope determines the rules by which the JS engine can search for variables and functions in your code. 
+Function Scope:
+1. Inside Function
+function findBatteries() {
+    const batteriesNumber = 8;
+    сonsole.log(batteriesNumber); // 8
+}
+console.log(batteriesNumber); // batteriesNumber is not defined
+findBatteries(); // 8
+
+2. Outside the Function
+let batteriesNumber = 12;  // global scope
+let batteriesInTetris = 4; // global scope
+
+function findBatteries() {
+const batteriesNumber = 8; // Local Scope
+console.log(batteriesNumber); // 8 - fonksiyonda 8 verilmiş, verilmeseydi 12.
+console.log(batteriesInTetris); // 4 - fonsiyonun hemen üstü verilmiş.
+
+Global Scope & Local Scope yukarıda ^
+Nested Scope - fonksiyon içeriside başka bir fonksiyonda variable/cons değeeri verilmiş durumlarda.
+
+**function expression vs function declaration
+
+--function inside an expression that calls addEventListener() method
+element.addEventListener("click", function () {
+ console.log("Click");
+}); 
+  ----
+// first, we've called the function
+double(2); // 4
+
+// then, we've declared it
+function double(num) {
+    return num * 2;
+} 
+  ---- function with expression - doesn't work...
+double(2); // error
+
+const double = function (num) {
+    return num * 2;
+}; 
+---
+// Function Declaration
+function double(num) {
+    return num * 2;
+}
+// Function Expression
+const triple = function (num) {
+    return num * 3;
+};
+double(2); // 4
+triple(2); // 6 
+
+// Passing the Function as an argument
+const result = [1, 2, 3].reduce(multiply);
+console.log(result); // 6 - the sum of all numbers of the array 
+
+// functions can return other functions
+const newFucntion = triple();
+-- example of returning another function
+function helloWorld() {
+  console.log("Hello, world!");
+}
+  return helloWorld;
+}
+const helloWorld = makeHelloWorld();
+
+console.log(helloWorld);
+helloWorld(); // "Hello world!"
+---
