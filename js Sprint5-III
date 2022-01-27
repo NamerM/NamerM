@@ -110,3 +110,47 @@ const array = [1, 2, 3, 4];
 
 const newArray = array.map(elem => elem * 2)
 
+---------
+Default Parameters
+
+--function generateName(firstName, lastName, middleName = "") {
+    return `${firstName} ${middleName} ${lastName}`;
+}
+generateName("Jane", "Doe"); // Jane Doe
+generateName("Jane", "Doe", "Mary"); // Jane Mary Doeers
+--
+function makeBeastArray(a = "Koala", b = "Wombat", c = "Sloth") {
+  return `${a}, ${b}, ${c}`;
+}  /* middlename deki gibi*/
+---
+Spread : https://javascript.plainenglish.io/how-to-get-unique-values-from-an-array-a9896a4c0c4
+const nums = [4, 8, 15, 16, 23, 42]; /* let's find the largest number in the array */
+
+Math.max(nums); // NaN - we've got the right method, but an array is not a number
+/* the spread operator will divide the array into separate arguments: 4, 8, 15, etc. */
+
+Math.max(...nums); // 42
+---
+Rest
+function consoleDogs(firstDog, ...otherDogs) {
+  console.log(`First: ${firstDog}`);
+  console.log(`The rest: ${otherDogs}`);
+}
+consoleDogs("Welsh Corgi", "German Shepherd", "Shiba Inu", "Labradoodle"); 
+
+/* This will be printed to the console:
+  First: Welsh Corgi
+  The rest: ["German Shepherd", "Shiba Inu", "Labradoodle"]*/
+
+---
+Arguments variable
+function gimmeSomeArguments() {
+    console.log(arguments);  }
+gimmeSomeArguments(1, 2); // [1, 2]
+gimmeSomeArguments("a", "b", "c", "d", "e"); // ["a", "b", "c", "d", "e"] 
+---
+Refactoring - making it easier to read : https://javascript.plainenglish.io/refactoring-code-in-javascript-695b42eea1a5
+
+
+
+
