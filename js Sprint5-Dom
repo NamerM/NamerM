@@ -10,4 +10,111 @@ function addSong(artistValue, titleValue) {
   `);
 }
 // <img src="https://invalid_url" onerror="alert('but most of all, samy is my hero')" >  // 
+--
+
+***createElement() & createTextNode()
+
+//the createElement() method takes the tag name as input
+const listItem = document.createElement("li");
+const divElement = document.createElement("div");
+const imageElement = document.createElement("img");
+
+//the createTextNode() method takes the text of the node as input 
+const textItem = document.createTextNode("Hello, world");
+--
+function addSong(artistValue, titleValue) {
+  songsContainer.insertAdjacentHTML("beforeend", `
+    <div class="song">
+      <h4 class="song__artist">${artistValue}</h4>
+      <p class="song__title">${titleValue}</p>
+      <button class="song__like"></button>
+    </div>
+  `);
+}
+
+>> aşağıdaki ile değişiyor :
+
+function addSong(artistValue, titleValue) {
+  const trackContainer = document.createElement("div");
+  trackContainer.classList.add("song");
+  
+  const artistElement = document.createElement("h4");
+  artistElement.classList.add("song__artist");
+  artistElement.textContent = artistValue;
+  const titleElement = document.createElement("p");
+  titleElement.classList.add("song__title");
+  titleElement.textContent = titleValue;
+  const likeButtonElement = document.createElement("button");
+  likeButtonElement.classList.add("song__like");
+  /*trackContainer.append(artistElement, titleElement, likeButtonElement); */
+  /*songsContainer.append(trackContainer);
+}
+
+
+*** append() method
+const list = document.querySelector(".todo-list");
+
+const listItem1 = document.createElement("li");
+const listItem2 = document.createElement("li");
+const listItem3 = document.createElement("li");
+
+list.append(listItem1, listItem2, listItem3);
+-  -  -  -
+
+There are 5 methods in total that you can use:
+*node.append(...nodes or strings) adds nodes or strings after the last child of the node
+*node.prepend(...nodes or strings) inserts nodes or strings before the first child of the node
+*node.before(...nodes or strings) inserts nodes or strings before the node
+*node.after(...nodes or strings) inserts nodes or strings after the node
+*node.replaceWith(...nodes or strings) replaces the node with the specified nodes or strings
+
+-
+const list = document.querySelector(".todo-list");
+// array of tasks for today
+const tasks = [
+    "To do a project",
+    "To walk a dog",
+    "To complete a React tutorial"
+];
+
+// convert the array of tasks for today to an array of elements
+const taskElements = tasks.map(task => {
+    const listItem = document.createElement("li");
+    listItem.textContent = task;
+    return listItem;
+});
+
+// add the element to the DOM by unfolding the array
+list.append(...taskElements); 
+-  -  -  -
+
+*** remove()  - closest()
+
+<li class="todo__item">
+    <span>To water flowers</span>
+    <button class="todo__item-button">Delete</button>
+<li>
+-
+// choose the delete button
+const deleteButton = document.querySelector(".todo__item-button");
+
+// add the handler 
+deleteButton.addEventListener("click", function () {
+    const listItem = deleteButton.closest(".todo__item");
+    listItem.remove();
+});
+
+---
+***Move Elements
+const list = document.querySelector(".todo-list");
+// the pseudo-array of child elements 
+// is located in the children property 
+const listItems = list.children;
+
+// move the first element of todo list to the end 
+list.append(listItems[0]);
+-  -  -
+
+
+
 
