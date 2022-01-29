@@ -173,9 +173,7 @@ Relations
 console.log(document.body.firstElementChild); // <p>Child one</p>
 console.log(document.body.lastElementChild); // <p>Child three</p>
 --
-
 <!-- index.html -->
-
 <body>
   <p>Child one</p>
   <span>Child two</span>
@@ -190,3 +188,7 @@ console.log(spanElement.nextElementSibling); // <p>Child three</p>
 
 // if there is no neighbor, it returns null
 console.log(spanElement.nextElementSibling.nextElementSibling); // null
+
+--
+An object is array-like if :  it's elements have numeric indexes & it has the length property.
+
