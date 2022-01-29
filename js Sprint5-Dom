@@ -114,7 +114,79 @@ const listItems = list.children;
 // move the first element of todo list to the end 
 list.append(listItems[0]);
 -  -  -
+***cloneNode()
+// cloning the element with all its content 
+const deepCopy = elem.cloneNode(true);
 
+// cloning the element without its child elements
+const shallowCopy = elem.cloneNode(false);
+--
+const container = document.querySelector(".container");
+const element = document.querySelector(".element");
 
+const elementCopy = element.cloneNode(true);
 
+container.append(elementCopy);
+--
+***template elements 
+<template id="user">
+    <div class="user">
+        <img class="user__avatar" alt="avatar">
+        <p class="user__name"></p>
+    </div>
+</template>
+---
+const userTemplate = document.querySelector("#user").content;
+const usersOnline = document.querySelector('.users-online');
 
+const userElement = userTemplate.querySelector('.user').cloneNode(true); // clone the content of the template tag 
+
+userElement.querySelector(".user__avatar").src = "tinyurl.com/v4pfzwy";  // add content
+userElement.querySelector(".user__name").textContent = "Duke, mayor of Cormorant";  // add content
+
+usersOnline.append(userElement);  // make it appear on the page
+---
+*** event + template 
+function addSong(artistValue, titleValue) {
+  const songTemplate = document.querySelector("#song-template").content;
+  const songElement = songTemplate.querySelector('.song').cloneNode(true);
+
+  songElement.querySelector(".song__artist").textContent = artistValue;
+  songElement.querySelector(".song__title").textContent =titleValue;
+  
+  songElement.querySelector(".song__like").addEventListener("click", function(evt) {
+      evt.target.classList.toggle("song__like_active");
+  });
+  
+  songsContainer.append(songElement);
+}
+---
+Relations
+
+<!-- index.html -->
+<body>
+  <p>Child one</p>   <p>Child two</p>   <p>Child three</p>
+<body>
+
+/* script.js */
+
+console.log(document.body.firstElementChild); // <p>Child one</p>
+console.log(document.body.lastElementChild); // <p>Child three</p>
+--
+
+<!-- index.html -->
+
+<body>
+  <p>Child one</p>
+  <span>Child two</span>
+  <p>Child three</p>
+<body>
+
+/* script.js */
+let spanElement = document.querySelector("span");
+
+console.log(spanElement.previousElementSibling); // <p>Child one</p>
+console.log(spanElement.nextElementSibling); // <p>Child three</p>
+
+// if there is no neighbor, it returns null
+console.log(spanElement.nextElementSibling.nextElementSibling); // null
