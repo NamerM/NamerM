@@ -192,3 +192,4 @@ console.log(spanElement.nextElementSibling.nextElementSibling); // null
 --
 An object is array-like if :  it's elements have numeric indexes & it has the length property.
 
+ 
