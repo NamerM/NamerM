@@ -1,0 +1,18 @@
+OBJECTS
+
+const newCommunityCenter = {
+  buildings: 3;
+  publicRooftopAccess: true,
+  bionicGarden: true,
+  architect: {
+    name: "Amir Habib",
+    starSign: "Gemini",
+  }
+};
+
+---data storage role---
+const poets = {
+    poe: "1809 – 1849",
+    dickinson: "1830 – 1886",
+    angelou: "1928 – 2014"
+};
