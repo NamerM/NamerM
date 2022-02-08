@@ -16,3 +16,143 @@ const poets = {
     dickinson: "1830 – 1886",
     angelou: "1928 – 2014"
 };
+--------------------------------
+
+const obj = {
+    one: 1,
+    two: 2,
+    three: 3
+};
+
+console.log(obj.one); // 1
+console.log(obj.two); // 2
+console.log(obj.three); // 3
+
+--------------------------------
+let dish = "fish";
+
+const dinner = {
+  dish: dish
+};
+
+dish = "neither fish nor fowl";  
+console.log(dinner.dish); // "fish"  //even if you reassign the variable later, the object's property will remain the same
+--------------------------------
+const human = "Finn";
+const dog = "Jake";
+const princess = "Bubblegum";
+
+function getCartoonName() {
+  return "Adventure Time";
+}
+
+const cartoon = { human, dog, princess, getCartoonName};
+---------------------------------
+***Accessing properties
+const obj = {
+    simpleName: true,
+    "I do what I want": true,
+    "123anarchy!!!": true
+};
+
+obj.I do what I want; // error  - obj["I do what I want"]; // true
+obj.123anarchy!!!; // error - obj["123anarchy!!!"]; // true" 
+------ Variable objects as keys
+const obj = {
+  "Hey! Ho!": "Let's go!"
+};
+
+const part1 = "Hey!";
+const part2 = "Ho!";
+const key = `${part1} ${part2}`;
+console.log(obj[key]); // "Let's go!"  -- console.log(obj["Hey! Ho!"]);
+--
+const birthday = {
+    amelia: {
+        month: "February",
+        day: 12
+    }    ,
+    lana: {
+        month: "July",
+        day: 29
+    }
+};
+let x = "amelia";
+let y = "day";
+birthday[x][y]= "14"; 
+console.log(birthday.amelia.day); // -- console.log(birthday["amelia"]["month"]);
+-----
+const obj = {};
+obj[1] = "one";
+obj[true] = "true";
+console.log(obj["1"]); // "one"
+console.log(obj[1]); // "one"
+---
+****Operators:  delete ****
+
+const obj = { one: 1 };
+console.log(obj.one); // 1
+
+delete obj.one;      // önce object ismi sonra property/key yazılıyor
+console.log(obj.one); // undefined
+---
+:::: in ::::
+const whoIsAtHome = {
+  father: "Homer",
+  mother: "Marge"
+};
+
+console.log("father" in whoIsAtHome); // true
+----------------------
+*** Iterating over Properties
+** for ... in
+
+const emojis = {
+  smile: "😃",
+  kiss: "😚",
+  smirk: "😏",
+  disappointment: "😞",
+  astonishment: "😲",
+  dizziness: "😵"
+};
+
+for (let emotion in emojis) {
+  console.log(`${emotion} - ${emojis[emotion]}`);
+}
+/* the console will print:
+  smile — 😃
+  kiss — 😚
+  smirk — 😏
+  disappointment — 😞
+  astonishment — 😲
+  dizziness — 😵
+*/
+----
+const products = { 
+  apple: { type: 'fruit', price: 1.32 }, 
+  banana: { type: 'fruit', price: 0.25 },
+  potato: { type: 'vegetable', price: 0.98 },
+};
+for (let key in products) {
+if (products[key].type === 'fruit') {
+  if (products[key].type === 'fruit') {
+    products[key].price *= 1.10;
+  }
+ }
+}
+Object.keys(products) // apple, banana, potato
+---
+Object.keys({ name: "John", surname: "Doe" }); // ["name", "surname"] 
+---
+Object.keys(myTrueLoveGaveToMe).forEach(function (a) {  // temperal literal ile keyleri console.log ile hem key hem key valueları olacak şekilde sıralıyoruz
+     console.log(`${a} - ${myTrueLoveGaveToMe[a]}`);    // for clarity, let's print the keys together with their values
+----
+object.values && object.entries
+const paulMcCartney = {
+    yesterday: "all my troubles seemed so far away"
+};
+
+console.log( Object.values(paulMcCartney) ); // ["all my troubles seemed so far away"]
+console.log( Object.entries(paulMcCartney) ); // [["yesterday", "all my troubles seemed so far away"]]
+     
+     
