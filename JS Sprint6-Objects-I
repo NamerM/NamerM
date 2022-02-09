@@ -166,7 +166,7 @@ function swap(obj) {
     // add the needed keys and their values to the res object
    
    res[obj[key]] = key;
-  // [[first, 1], [second, 2], [third, 3]]
+  // [obj[key]]olunca içerideki verileri array'e dönüştürüyor. = [[first, 1], [second, 2], [third, 3]]
 
     });
   return res;
