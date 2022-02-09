@@ -1,0 +1,18 @@
+***Pass by Reference ***
+Two events occur when you create an object: 1)The object itself is created and stored in memory.
+2)A link to this location in memory is added to a variable.(reference)
+
+const firstObj = {
+    one: 1,
+    two: 2
+};
+
+let secondObj = firstObj;
+secondObj = { one: 1, two: 2, three: 3 };
+
+console.log(firstObj); //" one: 1, two: 2 "
+
+----------
+
+
+
