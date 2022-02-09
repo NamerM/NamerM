@@ -159,6 +159,25 @@ const paulMcCartney = {
 console.log( Object.values(paulMcCartney) ); // ["all my troubles seemed so far away"]
 console.log( Object.entries(paulMcCartney) ); // [["yesterday", "all my troubles seemed so far away"]]
 -----
+***Swapping Values ***
+function swap(obj) {
+  const res = {};
+   Object.keys(obj).forEach(function (key) {
+    // add the needed keys and their values to the res object
+   
+   res[obj[key]] = key;
+  // [[first, 1], [second, 2], [third, 3]]
 
+    });
+  return res;
+}
 
+const myObj = {
+  first: 1,
+  second: 2,
+  third: 3
+};
+
+console.log(myObj); // { first: 1, second: 2, third: 3 }
+console.log(swap(myObj)); // { 1: "first", 2: "second", 3: "third" }
      
