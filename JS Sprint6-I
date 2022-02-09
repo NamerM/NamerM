@@ -23,10 +23,14 @@ const obj = {
     two: 2,
     three: 3
 };
-
 console.log(obj.one); // 1
 console.log(obj.two); // 2
 console.log(obj.three); // 3
+
+// let's add another one
+obj.four = 4;
+
+console.log(obj.four); // 4 
 
 --------------------------------
 let dish = "fish";
@@ -154,5 +158,7 @@ const paulMcCartney = {
 
 console.log( Object.values(paulMcCartney) ); // ["all my troubles seemed so far away"]
 console.log( Object.entries(paulMcCartney) ); // [["yesterday", "all my troubles seemed so far away"]]
-     
+-----
+
+
      
