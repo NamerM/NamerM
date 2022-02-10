@@ -13,6 +13,78 @@ secondObj = { one: 1, two: 2, three: 3 };
 console.log(firstObj); //" one: 1, two: 2 "
 
 ----------
+*** Comparing Objects ***
+primitives are compared according to their values, while objects are compared by their references.
+
+const firstObj = { hello: "world" };
+const secondObj = { hello: "world" };
+
+console.log(firstObj === secondObj); // false  return (firstObj === secondObj); //
+-------
+const time = {};
+const money = time;
+console.log(time === money); // true. time and money are references to the same object.
+-------
+**object compare by properties function
+
+function isEqual(firstObj, secondObj) {
+
+  const firstKeys = Object.keys(firstObj);
+  const secondKeys = Object.keys(secondObj);
+  
+  // check if the objects have the same number of keys
+  if (firstKeys.length !== secondKeys.length) {
+    return false;               // if not, that's enough. the objects are clearly not identical
+  } 
+      
+      /* check if values of corresponding keys are equal  in the compared objects */
+  return firstKeys.every(function (key) {
+    return firstObj[key] === secondObj[key];
+  }); 
+}
+---------
+****Copying Objects****
+    --Shallow Copy--  Object.assign()
+Object.assign(target, ...sources);  {} - empty object
+--
+const sourceObj = {
+    one: 1,
+    two: 2
+};
+const copiedObj = Object.assign({}, sourceObj);
+console.log(copiedO=== sourceObj); // false
+----
+const sourceObj = {
+  one: 1,
+  two: 2,
+  three: { message: "I love JS 🖤" }
+};
+const copiedObj = Object.assign({}, sourceObj);
+
+console.log(copiedObj === sourceObj);  // false
+console.log(copiedObj.three === sourceObj.three);  // true -- copiedObj.one two ile sourceObj.one two denedim içteki value referansına geçince true oluyor
+----
+**Deep Copying***
+
+const obj = {
+    one: 1,
+    two: 2,
+    three: { message: "I love JS" }
+};
+
+const objСopy = Object.assign({}, obj);
+objСopy.three = Object.assign({}, obj.three);
+
+console.log(objСopy);
+
+// { one: 1, two: 2, three: { message: "I love JS" } }  -- we manually copied the objects with shallow copy and than the inner object three nested 1 level inside.
+*--------
+ *** Approximate algorithm for this type of copying:
+1. Start iterating over all the properties of an object with a loop.
+2. If the loop finds a primitive property, it is copied.
+3. If the loop finds a property which contains an object, repeat steps 1 and 2 for that object.
+
+
 
 
 
