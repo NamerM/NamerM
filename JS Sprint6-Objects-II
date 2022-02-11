@@ -73,7 +73,7 @@ const obj = {
 };
 
 const objСopy = Object.assign({}, obj);
-objСopy.three = Object.assign({}, obj.three);
+objСopy.three = Object.assign({}, obj.three);  // *** const objCopy = Object.assign({}, obj, { three: Object.assign({}, obj.three) });   - TEK SATIRLA DEEP COPY 
 
 console.log(objСopy);
 
@@ -84,7 +84,88 @@ console.log(objСopy);
 2. If the loop finds a primitive property, it is copied.
 3. If the loop finds a property which contains an object, repeat steps 1 and 2 for that object.
 
+*** const objCopy = Object.assign({}, obj, { three: Object.assign({}, obj.three) });   - TEK SATIRLA DEEP COPY 
 
+---
+Arrays are Objects
 
+*check
+const arr = [1, 2, 3];
+const obj = {};
 
+console.log(Array.isArray(arr)); // true
+console.log(Array.isArray(obj)); // false
+---
+*passing by ref
+const a = [1, 2, 3];
+const b = [1, 2, 3];
+const c = b;
+
+console.log(a === b); // false
+console.log(b === c); // true
+---
+*Copying
+const boringTale = [
+  "A dog came in the kitchen",      "And stole a crust of bread.",    "Then cook up with a ladle,",
+    "And beat him till he was dead.",    "Then all the dogs came running",    "And dug the dog a tomb",    "And wrote upon the tombstone"
+];
+
+const boringTale2 = Object.assign([], boringTale);  // *** curly brackets yerine square brackets ile arrayler yeni objeye kopyalanır
+
+console.log(boringTale === boringTale2); // false.  // These are two different arrays that have identical sets of elements
+---
+const boringTale2 = boringTale.slice();
+
+boringTale === boringTale2; // false
+
+/* Comparison returns false since these are two
+different arrays. At the same time, all the
+elements of each array are identical: */
+
+boringTale[0] === boringTale2[0]; // true
+boringTale[1] === boringTale2[1]; // true
+boringTale[2] === boringTale2[2]; // true
+boringTale[3] === boringTale2[3]; // true
+boringTale[4] === boringTale2[4]; // true
+boringTale[5] === boringTale2[5]; // true
+boringTale[6] === boringTale2[6]; // true 
+---------
+objects: functions
+
+function multiply(a, b) {
+    return a * b;
+}
+console.log(typeof multiply); // "function"
+----
+function multiply(a, b) {
+    return a * b;
+}
+
+/* Functions are objects. Let's add someValue, and assign a value of 4 to it */
+multiply.someValue = 4;
+
+/* If you try accessing the function's property  that has the someValue key, it returns 4 */
+
+console.log(multiply.someValue); // 4  - we added property here 
+--------
+function multiply(a, b) {
+  return a * b;
+}
+
+let multiplyRef = multiply;
+
+console.log(multiply === multiplyRef); // true -- passing by reference
+------
+function counter() {
+  if (!counter.times) {
+    counter.times = 0;
+  }
+  counter.times += 1; 
+    return counter.times;
+}
+counter(); // 1
+counter(); // 2
+counter(); // 3
+counter(); // 4
+counter(); // 5
 
