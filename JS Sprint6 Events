@@ -100,3 +100,73 @@ link.addEventListener("click", function (evt) {
   }
 }   // e ve E leri ilgili inputa yazmaz.
  
+*** Event Bubbling
+<div id="parent">
+  <div id="firstChild">
+    <div id="secondChild">
+      <div id="thirdChild">Click here and see how it works</div>
+    </div>
+  </div>
+</div> 
+/* script.js */
+
+const parent = document.querySelector("#parent");
+const firstChild = document.querySelector("#firstChild");
+const secondChild = document.querySelector("#secondChild");
+const thirdChild = document.querySelector("#thirdChild");
+
+function callback(evt) {
+  console.log("Event handled");
+};
+
+parent.addEventListener("click", callback);
+firstChild.addEventListener("click", callback);
+secondChild.addEventListener("click", callback);
+thirdChild.addEventListener("click", callback);
+ // event called 4 times on each base, level
+----
+
+***Event Delegation 
+
+playlist.addEventListener("click", function (evt) {
+  // if the user has pressed on the like button, add a like
+  if (evt.target.classList.contains("song__like")) {
+    like(evt.target);
+  }
+
+  // otherwise, do nothing
+});
+
+** evt.currentTarget() Property ***
+--evt.currentTarget will return the element where we attached our handler, regardless of where the event is triggered.
+--evt.target will return the element that triggered the event.
+
+songsContainer.addEventListener("click", function (evt) {
+  if (evt.target.classList.contains("song__like")) {
+      evt.target.classList.toggle("song__like_active");
+  }
+
+});
+---
+**Preventing Bubbling
+stopPropagation() and stopImmediatePropagation()
+
+**evt.stopPropagation(), the bubbling stopped with the fired element and did not carry on to the parent elements.
+**stopImmediatePropagation() will prevent bubbling and it will also stop any other event handlers from firing on that element,
+but it will only stop those handlers described after its call. It has no effect on any handlers that come before it in the code.
+
+
+extra:
+<body>
+  <div class="container">
+        <button onclick="doSomething()">
+    </div>
+    <script>
+    function doSomething() {
+            console.log("You've clicked the button!");
+    }
+    </script>
+</body>
+better to keep script and html separate...
+
+
