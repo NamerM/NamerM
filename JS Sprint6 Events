@@ -1,0 +1,170 @@
+Keyboard Events :
+:: keydown :: keypressed :: keyup ::
+
+document.addEventListener("keydown", function () {
+    console.log("You're pressing the key");
+});
+
+document.addEventListener("keypress", function() {
+	console.log("You've pressed the key");
+});
+
+The keypress event is also fired when the user presses any key except modifier keys. 
+These are Alt, Ctrl, Shift, and Win on Windows, and Control, Option, Shift and Command on macOS.
+
+---
+<!-- index.html -->
+
+<input id="input">
+<div id="error" style="display: none"></div>
+---
+/* script.js */
+const input = document.querySelector("#input");
+const error = document.querySelector("#error"); // The error block is hidden by default
+input.addEventListener("keydown", function (evt) {
+                                          // Check if a digit has been input
+    if (Number.isNaN(Number(evt.key))) {  //  if (!(evt.keyCode <= 57 && evt.keyCode >= 48)) {  -- keyCode style ama artık eski standartta o seveple key' 1.den devam
+                                         
+    error.style.display = "block";         // If the user enters anything but a digit, the error block will be displayed
+    };
+});
+---
+function keyHandler(evt) {
+  if (evt.key === "Enter") {
+    addSong(artistInput.value, titleInput.value);
+  }
+}
+
+artistInput.addEventListener('keydown', keyHandler);
+titleInput.addEventListener('keydown', keyHandler);
+----
+Mouse Events 
+:: mouseover :: mouseout :: 
+mouseover fires when the cursor is moved over an element to which we've added an event listener.
+mouseout fires when the mouse is moved out of an element or any of its children.
+ - location of click important -
+mousedown fires once the mouse button is pressed.
+mouseup fires once the mouse button is released. 
+
+click : fires on left mouse button - mousedown+mouseup executes one after other
+doubleclick: 2xclick
+----
+contextmenu is like mousedown, but it's used for the right button. It fires once the right mouse button is pressed.
+
+coverHeading.addEventListener('dblclick', function () {
+    coverHeading.textContent = getRandomElement(playListTitles);
+   });
+
+--
+**remove event listener
+function showmessage()   {
+  console.log("We've declared the function beforehand, we'll use it later");
+}
+
+someElement.addEventListener("click", showmessage);
+someElement.removeEventListener("click", showmessage);
+
+
+:::removing by reference:::
+const character = {
+  health: 200
+};
+function increaseHealth(evt) {
+    character.health = character.health + 50; // increase HP
+
+      evt.target.removeEventListener("click", increaseHealth);  // once the potion is consumed, remove the listener from the corresponding function
+}
+
+potion.addEventListener("click", increaseHealth); // add a listener to the potion
+
+**preventDefault**
+// select the link element
+const link = document.querySelector(".link");
+
+// add a handler for the click event on the link element
+link.addEventListener("click", function (evt) {
+  // cancel the default browser behavior
+  evt.preventDefault();
+
+  console.log("The link isn't working anymore");
+}); 
+---
+                                    -- console.log(evt.key);  
+ function keyHandler(evt) {
+  if (evt.key === "Enter") {
+    addSong(artistInput.value, titleInput.value);
+  }
+  if (evt.key.toLowerCase() === "e") {
+    evt.preventDefault();
+    //console.log(evt.key);  // basılan tuşların değerini konsolda gösterir.
+  }
+}   // e ve E leri ilgili inputa yazmaz.
+ 
+*** Event Bubbling
+<div id="parent">
+  <div id="firstChild">
+    <div id="secondChild">
+      <div id="thirdChild">Click here and see how it works</div>
+    </div>
+  </div>
+</div> 
+/* script.js */
+
+const parent = document.querySelector("#parent");
+const firstChild = document.querySelector("#firstChild");
+const secondChild = document.querySelector("#secondChild");
+const thirdChild = document.querySelector("#thirdChild");
+
+function callback(evt) {
+  console.log("Event handled");
+};
+
+parent.addEventListener("click", callback);
+firstChild.addEventListener("click", callback);
+secondChild.addEventListener("click", callback);
+thirdChild.addEventListener("click", callback);
+ // event called 4 times on each base, level
+----
+
+***Event Delegation 
+
+playlist.addEventListener("click", function (evt) {
+  // if the user has pressed on the like button, add a like
+  if (evt.target.classList.contains("song__like")) {
+    like(evt.target);
+  }
+
+  // otherwise, do nothing
+});
+
+** evt.currentTarget() Property ***
+--evt.currentTarget will return the element where we attached our handler, regardless of where the event is triggered.
+--evt.target will return the element that triggered the event.
+
+songsContainer.addEventListener("click", function (evt) {
+  if (evt.target.classList.contains("song__like")) {
+      evt.target.classList.toggle("song__like_active");
+  }
+
+});
+---
+**Preventing Bubbling
+stopPropagation() and stopImmediatePropagation()
+
+**evt.stopPropagation(), the bubbling stopped with the fired element and did not carry on to the parent elements.
+**stopImmediatePropagation() will prevent bubbling and it will also stop any other event handlers from firing on that element,
+but it will only stop those handlers described after its call. It has no effect on any handlers that come before it in the code.
+
+
+extra:
+<body>
+  <div class="container">
+        <button onclick="doSomething()">
+    </div>
+    <script>
+    function doSomething() {
+            console.log("You've clicked the button!");
+    }
+    </script>
+</body>
+better to keep script and html separate...
