@@ -1,6 +1,6 @@
 Built-In Form Validation
 
-HTML based 
+***HTML based 
 minlength , maxlength, type (url, text, email) 
 <form>
   <input type="url" placeholder="URL">
@@ -9,4 +9,112 @@ minlength , maxlength, type (url, text, email)
   <button type="submit">Submit</button>
 </form>
 
-Styling Input Fields Using Pseudo-Classes
+***Styling Input Fields Using Pseudo-Classes
+ 
+:valid — indicates whether or not the input matches a valid pattern.
+:invalid — indicates the input is incorrect.
+:checked — applies styles to checked checkboxes (type="checkbox") and radio buttons (type="radio").
+:not — indicates that an element isn't in a :checked state.
+
+<form class="form">
+  <input class="form__input" type="url" placeholder="URL">
+  <input class="form__input" type="email" placeholder="Email">
+  <input class="form__input" type="text" placeholder="Name" minlength="2">
+  <button type="submit">Submit</button>
+</form>
+  ** below css pseudo classes 
+  
+.form__input:invalid {
+  border-bottom: 1px solid red; /* the red border is for invalid input */
+} 
+
+.form__input:valid {
+  border-bottom: 1px solid green; /* and the green border is for valid input */ 
+}
+
+-- required attribute 
+    <input class="form__input" type="text" placeholder="Name" minlength="2" required>
+    
+*** Javascript Form Validation ***
+
+ :: no validate -- attribute 
+  Turning of default error messages  
+    <form class="form" novalidate> ... </form>
+
+  :: ValidityStyle ::
+  document.forms[0][0]   first input of the first form 
+  If you wanted to examine the ValidityState object for the first field inside of your first form,
+  :: document.forms[0][0].validity
+  
+  ::valueMissing ::typeMismatch ::type="url" :: tooLong ::maxlength ::minlength ::tooShort
+    *The ::valueMissing property is true if the field is empty.
+    *The ::typeMismatch property is true if the input value is not the correct type, meaning it doesn't match the field's type. 
+      When used together, the ::typeMismatch property and ::type="email" and ::type="url" can provide some amazing results.
+    *The ::tooLong property is false when the number of characters doesn't exceed the specified ::maxlength attribute. 
+      his property can't be set to true in modern browsers as ::maxlength restricts users from entering more characters than allowed.
+    *The ::tooShort property is true when the number of characters entered doesn't exceed the specified ::minlength attribute.
+
+
+  ::Instant Form Validation::
+  // Select all the needed form elements, and assign them to constants 
+const formElement = document.querySelector(".form");
+const formInput = formElement.querySelector(".form__input");
+
+formElement.addEventListener("submit", function (evt) {
+  evt.preventDefault();
+});
+
+// Add the input event handler
+formInput.addEventListener("input", function (evt) {
+  // Log the values of the validity.valid property belonging to the input field, on which we're listening for the input event, to the console
+  console.log(evt.target.validity.valid);
+});
+  console.log(evt.target.validity);
+  
+ *** Connecting JS Validation Methods to DOM
+ 
+  ::Changing Field styles
+         <input class="form__input" type="email" placeholder="Email" required>
+  css ::
+         .form__input_type_error {
+             border-bottom-color: red; }
+   
+     Defining Input field's behaviour
+         *showInputError() — this function shows the error element in order to notify the user.
+         *hideInputError() — this function hides the error element.
+         *isValid() — this checks if the field is valid, and also calls either showInputError() or hideInputError().
+      
+     
+const formElement = document.querySelector(".form");
+const formInput = formElement.querySelector(".form__input");
+
+const showInputError = (element) => {
+  element.classList.add("form__input_type_error");
+};
+
+const hideInputError = (element) => {
+  element.classList.remove("form__input_type_error");
+};
+
+const isValid = () => {
+  if (!formInput.validity.valid) {
+    showInputError(formInput);
+  } else {
+    hideInputError(formInput);
+  }
+};
+ 
+formElement.addEventListener("submit", function (evt) {
+  evt.preventDefault();
+});
+
+formInput.addEventListener("input", isValid);
+
+---
+
+
+      
+
+
+
+
