@@ -1,0 +1,172 @@
+FORMS
+
+***Access Forms Using JS--Form sırasına göre javascripten referans:
+
+document.forms[0]; // the first form
+document.forms[1]; // the second form
+
+  <form name="form1 / form2">
+document.forms.form1; // the first form
+document.forms.form2; // the second form
+
+***Submitting
+<button type="submit">Submit</button>
+<button type="reset">Reset form data</button>
+<button type="button">Do something</button>
+----
+<form name="myForm">
+    <span>Only users that are 18 and over can visit the website</span> 
+  <input name="age" type="number" placeholder="Enter your age">
+  <button type="submit">Let me in</button>
+</form>
+const form = document.forms.myForm; // getting a form
+                                                          // binding an event handler of the submit event to the form
+form.addEventListener("submit", function (evt) {
+  evt.preventDefault();   // let's cancel the default action that belongs to the event
+  // checking the user data  // evt.preventDefault() called the form won't be submitted and the page won't be refreshed.
+});
+
+***Sending Data to the server
+-- action attribute 
+<form name="form" action="https://myserverdomain.com/form-handler">   -- old way
+
+---
+Accessing Form Elements
+
+document.forms.form1.elements; // elements of the first form
+document.forms.form2.elements; // elements of the second form
+
+<!-- index.html -->
+
+<form name="form1">
+  <h2>Form for entering the word "Google"</h2>
+  <input type="text" name="google" placeholder="Google">
+</form>
+
+<form name="form2">
+  <h2>Form about the universe</h2>
+  <input type="number" name="answer" placeholder="The answer to the most important question of life">
+  <input type="text" name="earth" placeholder="What is the shape of the Earth?">
+</form>
+
+/* script.js */
+const form1 = document.forms.form1;
+const form2 = document.forms.form2;
+
+const google = form1.elements.google; //<input type="text" name="google" ...
+const answer = form2.elements.answer; // <input type="number" name="answer" ...
+const earth = form2.elements.earth; // <input type="text" name="earth" ...
+
+
+** Input Text Value ***
+<form name="myForm">
+  <input type="text" name="myInput">
+  <textarea name="myTextArea"></textarea>
+  <button class="button">Submit</button>
+</form>
+*js*
+const button = document.querySelector(".button");
+
+const form = document.forms.myForm;
+const input = form.elements.myInput;
+const textArea = form.elements.myTextArea;
+
+// by clicking on the button -- log the values of the text fields to the console
+button.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  console.log(input.value); // the value of input
+  console.log(textArea.value); // the value of textArea
+});
+--
+
+** checkbox and Radio Button
+<form name="myForm">
+  <input type="checkbox" name="myCheckbox">
+  <button class="button">Submit</button>
+</form>
+
+*js*
+const button = document.querySelector(".button");
+
+const checkbox = document.forms.myForm.myCheckbox;
+
+// by clicking on the button -- log the value of the checked property belonging to checkbox to the console
+button.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  console.log(checkbox.checked); // true or false
+});
+
+**Select Field Value***
+<form name="myForm">
+  <select name="mySelect">
+    <option value="right">To the right</option>
+    <option value="left">To the left</option>
+    <option value="forward">Straight ahead</option>
+  </select>
+  <button class="button">Submit</button>
+</form>
+
+const button = document.querySelector(".button");
+
+const select = document.forms.myForm.elements.mySelect;
+
+button.addEventListener("click", function (evt) {  // by clicking on the button --  log the value of the value property for the drop-down list to the console
+  evt.preventDefault();
+  console.log(select.value); //the console will log what was selected
+});
+-----------------
+*** The Change and Input Events 
+In forms, our most important task is keeping track of any changes that happen inside of them
+the input and change events helps us to deal wit detecting & reacting changes made in the forms by users
+
+const checkbox = document.querySelector("input[type=checkbox]");
+
+function callback(evt) {
+  // the evt property contains the type of event
+  console.log(`The ${evt.type} event has occured`);
+}
+
+checkbox.addEventListener("input", callback);  // The input event occured
+
+checkbox.addEventListener("change", callback); // The change event occured
+----------
+const textInput = document.querySelector("input[type=text]");
+
+function callback(evt) {
+  console.log(`The ${evt.type} event has occured`);
+}
+
+textInput.addEventListener("input", callback);
+textInput.addEventListener("change", callback);
+
+/* Now, if you enter the word "Google" in a text field  and click outside the field, 
+the next message will be displayed in the console:
+
+  6 times: The input event has occured
+  1 time: The change event has occured
+*/
+-----------
+
+***Reset & Submit method
+
+*** reset() 
+const form = document.forms.myForm;
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+   . . .
+   form.reset(); }
+
+** submit();
+const form = document.forms.myForm;
+const input = form.elements.myInput;
+
+form.addEventListener("input", function(e) { 
+  if (input.length === 4) { 
+    form.submit(); 
+    }
+});
+form.addEventListener("submit", function (e) {
+  // processing of the submit event
+  });
+
