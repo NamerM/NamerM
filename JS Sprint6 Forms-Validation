@@ -1,0 +1,12 @@
+Built-In Form Validation
+
+HTML based 
+minlength , maxlength, type (url, text, email) 
+<form>
+  <input type="url" placeholder="URL">
+  <input type="email" placeholder="Email">
+  <input class="form__input" type="text" placeholder="Name" minlength="2" maxlength="6">
+  <button type="submit">Submit</button>
+</form>
+
+Styling Input Fields Using Pseudo-Classes
