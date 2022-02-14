@@ -112,9 +112,63 @@ formInput.addEventListener("input", isValid);
 
 ---
 
+Error Msg with <span>
 
-      
+<input id="email-input" class="form__input" type="email" placeholder="Email" required>
+<span class="email-input-error form__input-error">Please fill in this field</span>
+
+const formInput = formElement.querySelector(".form__input");
+console.log(formInput.id); // "email-input"
+--
+
+const formError = formElement.querySelector(`.${formInput.id}-error`); //gayet güzel olarak ilgili error elemanlarına erişim sağlar
+
+---
+const formElement = document.querySelector(".form");
+const formInput = formElement.querySelector(".form__input");
+
+const formError = formElement.querySelector(`.${formInput.id}-error`);  // template literal kullanımı ile form
+
+const showInputError = (element) => {
+  element.classList.add("form__input_type_error");
+  formError.classList.add("form__input-error_active");  // Show the error message
+};
+
+const hideInputError = (element) => {
+  element.classList.remove("form__input_type_error");
+  formError.classList.remove("form__input-error_active");  // Hide the error message
+};
+
+// The rest of the code remains unchanged
 
 
+:: validationMesssage :: 
+<span class="email-input-error form__input-error"></span>
+---
+const formElement = document.querySelector(".form");
+const formInput = formElement.querySelector(".form__input");
+const formError = formElement.querySelector(`.${formInput.id}-error`);
 
+const showInputError = (element, errorMessage) => { // The error message will be the function's second parameter
+  element.classList.add("form__input_type_error");
+  formError.textContent = errorMessage;   // Replace the content of the error message with the passed errorMessage argument
+  formError.classList.add("form__input-error_active");
+};
+
+const hideInputError = (element) => {
+  element.classList.remove("form__input_type_error");
+  formError.classList.remove("form__input-error_active");
+  formError.textContent = "";   // Reset the error
+};
+
+const isValid = () => {
+  if (!formInput.validity.valid) {   // The error message itself is the function's second parameter
+     showInputError(formInput, formInput.validationMessage);
+  } else {
+    hideInputError(formInput);
+  }
+};
+ 
+// The rest of the code remains unchanged
+---
 
