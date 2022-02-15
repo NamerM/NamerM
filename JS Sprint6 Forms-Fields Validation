@@ -56,6 +56,7 @@ const isValid = (formElement, inputElement) => {
     inputElement.addEventListener("input", () => {
                             // Call the isValid() function inside the callback, and pass the form and the element to be checked to it
       isValid(formElement, inputElement)
+       (buraya toggleButtonState geliyor aşağıdan bakılabilir)
     });
   });
 };
@@ -78,6 +79,58 @@ const isValid = (formElement, inputElement) => {
 
 // Call the function
 enableValidation();
+ 
+ 
+ ---Interaction / other DOM elements 
+Deactivating submit button incase of an incorrect entry to an input.
+
+::isValid() only validates the input element.
+::hasInvalidInput() only 1 invalid is enough for "true"
+
+
+ // The function takes an array of fields
+
+const hasInvalidInput = (inputList) => {
+  
+  return inputList.some((inputElement) => {   // iterate over the array using the some() method
+        // If the field is invalid, the callback will return true. 
+        // The method will then stop, and hasInvalidInput() function will return true  hasInvalidInput returns true.
+
+    return !inputElement.validity.valid;
+  })
+};
+ ---------------------
+ // The function takes an array of input fields and the button element, whose state you need to change
+
+const toggleButtonState = (inputList, buttonElement) => {
+                 
+  if (hasInvalidInput(inputList)) {   // If there is at least one invalid input
+                               
+    buttonElement.classList.add("form__submit_inactive"); // make the button inactive
+  } else {
+     
+    buttonElement.classList.remove("form__submit_inactive");   // otherwise, make it active
+  }
+};
+ 
+ -------------- check the button - should be active or not ---------
+Adding Handlers to all form fields code is modified below:
+
+const setEventListeners = (formElement) => {
+                                           
+  const inputList = Array.from(formElement.querySelectorAll(".form__input")); // Find all the form fields and make an array of them
+  const buttonElement = formElement.querySelector(".form__submit");  // Find the submit button in the current form
+    
+  toggleButtonState(inputList, buttonElement);  // Call the toggleButtonState() and pass an array of fields and the button to it
+      
+  inputList.forEach((inputElement) => {
+    inputElement.addEventListener("input", () => {
+      isValid(formElement, inputElement);
+
+                                         
+    });
+  });
+};
  
  
  
