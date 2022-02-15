@@ -133,4 +133,4 @@ const setEventListeners = (formElement) => {
 };
  
  
- 
+<input type="text" pattern="^[a-zA-Z]+$">
