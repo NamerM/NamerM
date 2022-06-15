@@ -1,0 +1,12 @@
+As you know, a function expression is a function that is declared inside an expression. 
+You're already familiar with the most common cases where we can use function expressions:
+
+// a function stored in a variable
+const double = function (num) {
+  return num * 2;
+};
+
+// a function passed through a method
+[1, 2, 3].map(function (item) {
+  return item * 2;
+}); 

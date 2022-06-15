@@ -1,0 +1,14 @@
+PARENT
+_getTemplate() will go in the parent class. The method gets a markup template using a 
+specific selector. Each card is going to need to do this.
+
+_setEventListeners() and _handleMessageClick() will go in the parent class. 
+These methods assign functionality to our cards depending on certain events. 
+All of our cards will need to work with events.
+
+
+CHILD
+generateCard() will go in the child class. 
+This method will populate cards with their data and functionality. 
+Currently, we have two types of cards with different data, meaning each will need 
+its own method.

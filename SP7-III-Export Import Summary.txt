@@ -1,0 +1,16 @@
+Summary
+Export syntax:
+export const array = [1, 2, 3] — export on declaration.
+export { dog, cat } — export multiple entities separate from their declaration.
+export default data — export a single variable, function, or class.
+
+Import syntax:
+import { array } from "./data.js" — import using a feature's original name.
+import * — import all exports. 
+//import * as data from "./data.js";  console.log(data); so it will be loaded to page
+
+console.log(data.array); // [1, 2, 3]
+console.log(data.arrSquared); // [1, 4, 9] 
+
+import { array as arr } from "./data.js" — rename feature on import.
+import data from "./data.js"; — import of a default export (no curly braces needed).
