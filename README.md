@@ -34,8 +34,14 @@
 <a href="https://www.postman.com/">
  <img src="https://image.pngaaa.com/42/95042-middle.png" alt="Postman" width="40" height="40">
 </a>
+<a href="https://ulead-photoimpact.en.uptodown.com/windows/download">
+ <img src="https://download.cnet.com/a/img/resize/7705671f661fee274e98f95892198e2a9e77e150/catalog/2009/08/06/fmimg2431630169948038152.png?auto=webp&fit=crop&width=64" alt="Ulead PhotoImpact" width="40" height="40">
+</a>
+<a href="https://www.adobe.com/il_en/products/photoshop.html">
+ <img src="https://img.utdstc.com/icon/42b/887/42b88716cf8ace42ebb7e8bffa8cc6728a3033e02e3d05f9eff1fdb6db566461:100" alt="Adobe Photoshop" width="40" height="40">
+</a>
 </p>
-Affinity to Photoshop, Ulead PhotoImpact, GIMP and graphic edit programs.
+
 
 ## Experience
 
