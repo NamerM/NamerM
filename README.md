@@ -1,5 +1,6 @@
  # Hi there, I’m Melih Namer 👋
- Tech and computer enthusiast.
+ Tech and computer enthusiast. 
+ **Looking forward to the next act of my journey in the tech world**
 
 # Tech Coverage
 <a href="https://www.w3schools.com/html/">
