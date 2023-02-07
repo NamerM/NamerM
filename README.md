@@ -36,6 +36,7 @@
 </a>
 </p>
 Affinity to Photoshop, Ulead PhotoImpact, GIMP and graphic edit programs.
+
 ## Experience
 
 
