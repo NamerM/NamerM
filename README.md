@@ -34,7 +34,7 @@
 <a href="https://www.postman.com/">
  <img src="https://image.pngaaa.com/42/95042-middle.png" alt="Postman" width="40" height="40">
 </a>
-Affinity to Photoshop, Ulead PhotoImpact, GIMP and graphic edit programs.
+<span>Affinity to Photoshop, Ulead PhotoImpact, GIMP and graphic edit programs.</span>
 </p>
 ## Experience
 
